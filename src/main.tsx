@@ -1,19 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { MantineProvider } from "@mantine/core";
-import theme from "./plugins/theme.ts";
+import ThemeProvider from "./providers/ThemeProvider.tsx";
 
 // Styles
 import "@mantine/core/styles.css";
-import "./index.css";
 
 // Components
 import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MantineProvider theme={theme}>
+    <ThemeProvider>
       <App />
-    </MantineProvider>
+    </ThemeProvider>
   </StrictMode>
 );

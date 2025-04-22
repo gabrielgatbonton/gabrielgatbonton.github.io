@@ -1,13 +1,15 @@
+import { AppShell, Container } from "@mantine/core";
+import Header from "./components/header";
+
 function App() {
   return (
-    <>
-      <div>
-        <h1>Welcome to the Mantine + React + Vite Template!</h1>
-        <p>
-          Edit <code>src/App.tsx</code> to start building your app.
-        </p>
-      </div>
-    </>
+    <AppShell header={{ height: 60 }} padding="md">
+      <AppShell.Header>
+        <Container size="responsive" h="100%">
+          <Header />
+        </Container>
+      </AppShell.Header>
+    </AppShell>
   );
 }
 
