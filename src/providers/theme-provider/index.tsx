@@ -5,7 +5,7 @@ import { Container, createTheme, MantineProvider } from "@mantine/core";
 import { ReactNode } from "react";
 
 // Theme
-import classes from "./ThemeProvider.module.css";
+import classes from "./styles.module.css";
 
 const theme = createTheme({
   fontFamily: "Outfit, sans-serif",
