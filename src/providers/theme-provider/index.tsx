@@ -1,5 +1,6 @@
 import cx from "clsx";
-import { Container, createTheme, MantineProvider } from "@mantine/core";
+import { Container, Text, createTheme, MantineProvider } from "@mantine/core";
+import { primaryColor } from "../../constants/colors";
 
 // Types
 import { ReactNode } from "react";
@@ -9,7 +10,16 @@ import classes from "./styles.module.css";
 
 const theme = createTheme({
   fontFamily: "Outfit, sans-serif",
+  colors: {
+    primaryColor,
+  },
+  primaryColor: "primaryColor",
   components: {
+    Text: Text.extend({
+      classNames: (_, { c }) => ({
+        root: cx({ [classes.dimmedText]: c === "dimmed" }),
+      }),
+    }),
     Container: Container.extend({
       classNames: (_, { size }) => ({
         root: cx({ [classes.responsiveContainer]: size === "responsive" }),

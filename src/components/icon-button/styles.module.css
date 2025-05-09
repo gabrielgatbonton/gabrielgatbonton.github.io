@@ -1,0 +1,8 @@
+.icon {
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.filledHovered {
+  transform: scale(1.1); /* scale up slightly */
+}
