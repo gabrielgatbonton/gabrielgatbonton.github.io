@@ -1,24 +1,18 @@
 import portraitImg from "../../assets/portrait.jpeg";
-import { Box, Button, Card, Group, Image, Text, Title } from "@mantine/core";
-import classes from "./styles.module.css";
+import { Box, Group, Image, Text, Title } from "@mantine/core";
 
 // Components
-import IconButton from "../icon-button";
+import DefaultBorder from "../default-border";
+import IconButton from "../buttons/icon-button";
+import PrimaryButton from "../buttons/primary-button";
 
 // Constants
 import { MAPPED_PROFILE_LINKS } from "../../constants/icons";
 
 export default function ProfileCard() {
   return (
-    <Card padding={36} radius={20} className={classes.card}>
-      <Image
-        src={portraitImg}
-        w="100%"
-        h="auto"
-        mb={24}
-        radius={20}
-        className={classes.image}
-      />
+    <DefaultBorder padding={36} radius={20} w={350} h={600}>
+      <Image src={portraitImg} w="100%" h="auto" mb={24} radius={20} />
 
       <Title order={2} ta="center" mb={8}>
         Gabriel Gatbonton
@@ -40,9 +34,9 @@ export default function ProfileCard() {
         ))}
       </Group>
 
-      <Button mx="auto" mt="auto" w={180} color="primaryColor.4">
+      <PrimaryButton mx="auto" mt="auto" w={160} fw={500}>
         Let's Talk
-      </Button>
-    </Card>
+      </PrimaryButton>
+    </DefaultBorder>
   );
 }

@@ -1,5 +1,5 @@
 import { ActionIcon } from "@mantine/core";
-import { mappedIcons, IconType } from "../../constants/icons";
+import { mappedIcons, IconType } from "../../../constants/icons";
 import classes from "./styles.module.css";
 import { useHover } from "@mantine/hooks";
 import clsx from "clsx";

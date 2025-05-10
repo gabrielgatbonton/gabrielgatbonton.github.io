@@ -26,6 +26,11 @@ const theme = createTheme({
       }),
     }),
   },
+  headings: {
+    sizes: {
+      h1: { fontSize: "72px", fontWeight: "600", lineHeight: "115%" },
+    },
+  },
 });
 
 export default function ThemeProvider({ children }: { children: ReactNode }) {
