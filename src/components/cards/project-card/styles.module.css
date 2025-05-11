@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+.card:hover .backImage {
+  transform: scale(1.05) rotate(-32deg);
+}
+
+.card:hover .foreImage {
+  transform: scale(1.05) rotate(-24deg);
+}
+
+.card:hover .sectionBlur {
+  color: var(--mantine-color-primaryColor-1);
+}
+
+.cardShadow {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.backImage {
+  z-index: 1;
+  transform: rotate(-32deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.foreImage {
+  z-index: 2;
+  transform: rotate(-24deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sectionBlur {
+  z-index: 3;
+  backdrop-filter: blur(16px);
+  background: rgba(255, 237, 237, 0.37);
+  color: var(--mantine-color-white);
+}

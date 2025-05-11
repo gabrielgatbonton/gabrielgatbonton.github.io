@@ -1,4 +1,4 @@
-import { AppShell, Group, ScrollArea, Stack } from "@mantine/core";
+import { AppShell, Box, Group, Stack } from "@mantine/core";
 import classes from "./App.module.css";
 
 // Components
@@ -19,15 +19,21 @@ function App() {
       />
 
       <MainContainer>
-        <Group gap={100} wrap="nowrap" w="100%">
+        <Group gap={100} wrap="nowrap" w="100%" h="100%">
           <ProfileCard />
 
-          <ScrollArea flex={1} h={500} type="never">
+          <Box
+            flex={1}
+            h="inherit"
+            style={{ overflowY: "scroll" }}
+            py={150}
+            className={classes.noScrollbar}
+          >
             <Stack gap={100}>
               <HomeSection />
               <ProjectSection />
             </Stack>
-          </ScrollArea>
+          </Box>
         </Group>
       </MainContainer>
     </AppShell>

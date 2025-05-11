@@ -1,15 +1,19 @@
-import { Title, Text } from "@mantine/core";
+import { Title, Text, TitleProps } from "@mantine/core";
 
-type HeadlineProps = {
+type HeadlineProps = TitleProps & {
   title: string;
   highlight: string;
 };
 
-export default function Headline({ title, highlight }: HeadlineProps) {
+export default function Headline({
+  title,
+  highlight,
+  ...props
+}: HeadlineProps) {
   const parts = title.split(new RegExp(`(${highlight})`, "gi"));
 
   return (
-    <Title order={1}>
+    <Title {...props}>
       {parts.map((part, index) =>
         part.toLowerCase() === highlight.toLowerCase() ? (
           <Text key={index} span c="primaryColor" inherit>

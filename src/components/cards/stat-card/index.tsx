@@ -1,7 +1,7 @@
 import { Title } from "@mantine/core";
 
 // Components
-import DefaultBorder from "../default-border";
+import DefaultBorder from "../../default-border";
 
 type StatCardProps = {
   value: string;
