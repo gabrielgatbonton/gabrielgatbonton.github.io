@@ -3,7 +3,7 @@ import classes from "./App.module.css";
 
 // Components
 import MainContainer from "./components/main-container";
-import ProfileCard from "./components/profile-card";
+import ProfileCard from "./components/cards/profile-card";
 import HomeSection from "./components/sections/home-section";
 import ProjectSection from "./components/sections/project-section";
 import Navbar from "./components/navbar";

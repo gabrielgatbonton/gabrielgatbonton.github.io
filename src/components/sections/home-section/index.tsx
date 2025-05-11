@@ -1,7 +1,7 @@
 import { Text, Box, BoxProps, Title, Group } from "@mantine/core";
 
 // Components
-import StatCard from "../../stat-card";
+import StatCard from "../../cards/stat-card";
 import PrimaryButton from "../../buttons/primary-button";
 import ArrowButton from "../../buttons/arrow-button";
 

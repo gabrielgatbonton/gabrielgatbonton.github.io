@@ -1,13 +1,13 @@
-import portraitImg from "../../assets/portrait.jpeg";
+import portraitImg from "../../../assets/portrait.jpeg";
 import { Box, Group, Image, Text, Title } from "@mantine/core";
 
 // Components
-import DefaultBorder from "../default-border";
-import IconButton from "../buttons/icon-button";
-import PrimaryButton from "../buttons/primary-button";
+import DefaultBorder from "../../default-border";
+import IconButton from "../../buttons/icon-button";
+import PrimaryButton from "../../buttons/primary-button";
 
 // Constants
-import { MAPPED_PROFILE_LINKS } from "../../constants/icons";
+import { MAPPED_PROFILE_LINKS } from "../../../constants/icons";
 
 export default function ProfileCard() {
   return (
