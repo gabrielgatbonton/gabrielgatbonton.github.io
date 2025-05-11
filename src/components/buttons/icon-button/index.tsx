@@ -6,22 +6,26 @@ import clsx from "clsx";
 
 type IconButtonProps = {
   icon: IconType;
+  defaultColor?: string;
 };
 
-const hoveredStyles = {
-  default: {
-    color: "#222120",
-    variant: "transparent",
-  },
-  hovered: {
-    color: "primaryColor.5",
-    variant: "filled",
-  },
-};
-
-export default function IconButton({ icon }: IconButtonProps) {
+export default function IconButton({
+  icon,
+  defaultColor = "#222120",
+}: IconButtonProps) {
   const IconComponent = mappedIcons[icon];
   const { hovered, ref } = useHover();
+
+  const hoveredStyles = {
+    default: {
+      color: defaultColor,
+      variant: "transparent",
+    },
+    hovered: {
+      color: "primaryColor.5",
+      variant: "filled",
+    },
+  };
 
   const { color, variant } = hovered
     ? hoveredStyles.hovered

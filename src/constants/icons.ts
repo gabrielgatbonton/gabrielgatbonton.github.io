@@ -3,6 +3,10 @@ import {
   IconBrandInstagram,
   IconBrandLinkedin,
   IconMail,
+  IconHome,
+  IconFolder,
+  IconTool,
+  IconPhone
 } from "@tabler/icons-react";
 
 export const mappedIcons = {
@@ -10,6 +14,10 @@ export const mappedIcons = {
   instagram: IconBrandInstagram,
   linkedin: IconBrandLinkedin,
   email: IconMail,
+  home: IconHome,
+  folder: IconFolder,
+  tool: IconTool,
+  phone: IconPhone,
 };
 
 export type IconType = keyof typeof mappedIcons;
@@ -34,6 +42,25 @@ export const MAPPED_PROFILE_LINKS: readonly ProfileLink[] = [
   },
   {
     icon: "email",
+    link: "",
+  },
+];
+
+export const MAPPED_NAVBAR_LINKS: readonly ProfileLink[] = [
+  {
+    icon: "home",
+    link: "",
+  },
+  {
+    icon: "folder",
+    link: "",
+  },
+  {
+    icon: "tool",
+    link: "",
+  },
+  {
+    icon: "phone",
     link: "",
   },
 ];

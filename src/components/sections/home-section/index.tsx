@@ -1,12 +1,12 @@
 import { Text, Box, BoxProps, Title, Group } from "@mantine/core";
 
 // Components
-import StatCard from "../stat-card";
-import PrimaryButton from "../buttons/primary-button";
-import ArrowButton from "../buttons/arrow-button";
+import StatCard from "../../stat-card";
+import PrimaryButton from "../../buttons/primary-button";
+import ArrowButton from "../../buttons/arrow-button";
 
 // Constants
-import { MAPPED_STATS } from "../../constants/data";
+import { MAPPED_STATS } from "../../../constants/data";
 
 type HomeSectionProps = BoxProps & {};
 
