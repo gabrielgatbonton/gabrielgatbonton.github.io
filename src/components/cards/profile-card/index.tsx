@@ -14,7 +14,7 @@ export default function ProfileCard() {
     <DefaultBorder padding={36} radius={20} w={350} h={600}>
       <Image src={portraitImg} w="100%" h="auto" mb={24} radius={20} />
 
-      <Title order={2} ta="center" mb={8}>
+      <Title size={26} fw={700} ta="center" mb={8}>
         Gabriel Gatbonton
       </Title>
 

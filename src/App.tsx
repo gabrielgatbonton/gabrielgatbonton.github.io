@@ -1,12 +1,12 @@
-import { AppShell, Box, Group, Stack } from "@mantine/core";
+import { AppShell, Box, Group } from "@mantine/core";
 import classes from "./App.module.css";
 
 // Components
 import MainContainer from "./components/main-container";
 import ProfileCard from "./components/cards/profile-card";
-import HomeSection from "./components/sections/home-section";
-import ProjectSection from "./components/sections/project-section";
+
 import Navbar from "./components/navbar";
+import { Outlet } from "react-router";
 
 function App() {
   return (
@@ -29,10 +29,7 @@ function App() {
             py={150}
             className={classes.noScrollbar}
           >
-            <Stack gap={100}>
-              <HomeSection />
-              <ProjectSection />
-            </Stack>
+            <Outlet />
           </Box>
         </Group>
       </MainContainer>

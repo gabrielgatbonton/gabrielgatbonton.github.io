@@ -7,6 +7,7 @@ type ProjectCardProps = {
   subtitle: string;
   imageOne: string;
   imageTwo: string;
+  onClick?: () => void;
 };
 
 export default function ProjectCard({
@@ -14,6 +15,7 @@ export default function ProjectCard({
   subtitle,
   imageOne,
   imageTwo,
+  onClick,
 }: ProjectCardProps) {
   return (
     <Card
@@ -22,6 +24,7 @@ export default function ProjectCard({
       radius={20}
       bg="primaryColor"
       className={classes.card}
+      onClick={onClick}
     >
       <Box className={classes.hoverEffect}>
         {/* Background Image (tilted) */}
