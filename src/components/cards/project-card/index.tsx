@@ -59,7 +59,7 @@ export default function ProjectCard({
         className={classes.sectionBlur}
       >
         <Stack gap={0}>
-          <Title order={3}>{title}</Title>
+          <Title order={4}>{title}</Title>
           <Text size="md">{subtitle}</Text>
         </Stack>
       </Box>

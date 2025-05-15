@@ -1,0 +1,9 @@
+.customInput {
+  border: 2px solid #5c5853;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out;
+
+  &:focus {
+    border-color: var(--mantine-color-primaryColor-5);
+  }
+}

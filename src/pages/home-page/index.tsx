@@ -4,6 +4,7 @@ import { Stack } from "@mantine/core";
 import HomeSection from "../../components/sections/home-section";
 import ProjectSection from "../../components/sections/project-section";
 import ToolsSection from "../../components/sections/tools-section";
+import ContactSection from "../../components/sections/contact-section";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
         <HomeSection />
         <ProjectSection />
         <ToolsSection />
+        <ContactSection />
       </Stack>
     </>
   );

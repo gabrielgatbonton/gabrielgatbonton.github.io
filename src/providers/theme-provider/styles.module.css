@@ -1,11 +1,11 @@
 .responsiveContainer {
-  max-width: 1200px !important;
+  max-width: 1200px;
 
   @media (min-width: em(1408px)) {
-    max-width: 1325px !important;
+    max-width: 1325px;
   }
 }
 
 .dimmedText {
-  color: #5e5951 !important;
+  color: #5e5951;
 }

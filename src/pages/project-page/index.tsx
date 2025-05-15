@@ -33,7 +33,7 @@ export default function ProjectPage() {
       <Image mb={28} radius={20} src={ChimsTwo} />
 
       <Box mb={28}>
-        <Title order={2} mb={4}>
+        <Title order={3} mb={4}>
           Citizen's Health Information and Management System
         </Title>
         <Text size="lg" fw={500} c="dimmed">

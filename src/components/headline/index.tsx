@@ -8,12 +8,13 @@ type HeadlineProps = TitleProps & {
 export default function Headline({
   title,
   highlight,
+  order = 1,
   ...props
 }: HeadlineProps) {
   const parts = title.split(new RegExp(`(${highlight})`, "gi"));
 
   return (
-    <Title {...props}>
+    <Title order={order} {...props}>
       {parts.map((part, index) =>
         part.toLowerCase() === highlight.toLowerCase() ? (
           <Text key={index} span c="primaryColor" inherit>
