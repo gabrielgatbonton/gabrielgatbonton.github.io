@@ -1,38 +1,35 @@
 import { AppShell, Box, Group } from "@mantine/core";
+import { Outlet } from "react-router";
 import classes from "./App.module.css";
 
-// Components
 import MainContainer from "./components/main-container";
 import ProfileCard from "./components/cards/profile-card";
-
 import Navbar from "./components/navbar";
-import { Outlet } from "react-router";
 
 function App() {
   return (
     <AppShell padding="md" className={classes.appShell} pos="relative">
       <Navbar
-        pos="absolute"
+        pos="fixed"
         left={50}
         top="50%"
         style={{ transform: "translateY(-50%)" }}
       />
 
-      <MainContainer>
-        <Group gap={100} wrap="nowrap" w="100%" h="100%">
-          <ProfileCard />
+      <Box h="100%" mt="5%">
+        <MainContainer>
+          <Group h="100%" w="100%" align="start" wrap="nowrap" gap={100}>
+            {/* Sticky Profile */}
+            <Box pos="sticky" top={40}>
+              <ProfileCard />
+            </Box>
 
-          <Box
-            flex={1}
-            h="inherit"
-            style={{ overflowY: "scroll" }}
-            py={150}
-            className={classes.noScrollbar}
-          >
-            <Outlet />
-          </Box>
-        </Group>
-      </MainContainer>
+            <Box flex={1} py={50}>
+              <Outlet />
+            </Box>
+          </Group>
+        </MainContainer>
+      </Box>
     </AppShell>
   );
 }
