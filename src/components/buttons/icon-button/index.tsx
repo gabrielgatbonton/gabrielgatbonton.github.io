@@ -7,11 +7,15 @@ import clsx from "clsx";
 type IconButtonProps = {
   icon: IconType;
   defaultColor?: string;
+  active?: boolean;
+  onClick?: () => void;
 };
 
 export default function IconButton({
   icon,
   defaultColor = "#222120",
+  active,
+  onClick,
 }: IconButtonProps) {
   const IconComponent = mappedIcons[icon];
   const { hovered, ref } = useHover();
@@ -27,7 +31,9 @@ export default function IconButton({
     },
   };
 
-  const { color, variant } = hovered
+  const { color, variant } = active
+    ? hoveredStyles.hovered
+    : hovered
     ? hoveredStyles.hovered
     : hoveredStyles.default;
 
@@ -41,6 +47,7 @@ export default function IconButton({
       className={clsx(classes.icon, {
         [classes.filledHovered]: hovered && variant === "filled",
       })}
+      onClick={onClick}
     >
       <IconComponent style={{ width: "80%", height: "80%" }} />
     </ActionIcon>

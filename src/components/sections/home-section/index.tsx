@@ -1,3 +1,4 @@
+import { HTMLAttributes } from "react";
 import { Text, Box, BoxProps, Title, Group } from "@mantine/core";
 
 // Components
@@ -8,7 +9,7 @@ import ArrowButton from "../../buttons/arrow-button";
 // Constants
 import { MAPPED_STATS } from "../../../constants/data";
 
-type HomeSectionProps = BoxProps & {};
+type HomeSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
 export default function HomeSection({ ...props }: HomeSectionProps) {
   return (

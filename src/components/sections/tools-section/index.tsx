@@ -1,4 +1,5 @@
-import { Box, Grid } from "@mantine/core";
+import { HTMLAttributes } from "react";
+import { Box, BoxProps, Grid } from "@mantine/core";
 
 // Components
 import Headline from "../../headline";
@@ -7,9 +8,11 @@ import ToolCard from "../../cards/tool-card";
 // Constants
 import { MAPPED_TOOLS } from "../../../constants/data";
 
-export default function ToolsSection() {
+type ToolsSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
+
+export default function ToolsSection({ ...props }: ToolsSectionProps) {
   return (
-    <Box>
+    <Box {...props}>
       <Headline
         mb={42}
         title="The Engines Behind My Projects"

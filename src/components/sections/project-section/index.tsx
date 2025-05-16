@@ -1,4 +1,5 @@
-import { Box, Group } from "@mantine/core";
+import { HTMLAttributes } from "react";
+import { Box, Group, BoxProps } from "@mantine/core";
 import { useNavigate } from "react-router";
 
 // Components
@@ -8,7 +9,9 @@ import ProjectCard from "../../cards/project-card";
 // Constants
 import { MAPPED_PROJECTS } from "../../../constants/data";
 
-export default function ProjectSection() {
+type ProjectSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
+
+export default function ProjectSection({ ...props }: ProjectSectionProps) {
   const navigate = useNavigate();
 
   const handleProjectClick = (project: string) => {
@@ -16,7 +19,7 @@ export default function ProjectSection() {
   };
 
   return (
-    <Box>
+    <Box {...props}>
       <Headline
         title="Recent Projects and Achievements"
         highlight="Achievements"

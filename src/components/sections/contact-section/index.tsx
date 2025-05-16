@@ -1,4 +1,5 @@
-import { Box } from "@mantine/core";
+import { HTMLAttributes } from "react";
+import { Box, BoxProps } from "@mantine/core";
 
 // Components
 import Headline from "../../headline";
@@ -7,9 +8,11 @@ import DefaultAccordion from "../../default-accordion";
 
 import { MAPPED_FAQS } from "../../../constants/data";
 
-export default function ContactSection() {
+type ContactSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
+
+export default function ContactSection({ ...props }: ContactSectionProps) {
   return (
-    <Box>
+    <Box {...props}>
       <Headline
         title="Feeling up to it? Slide Into My Inbox"
         highlight="My Inbox"

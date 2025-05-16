@@ -6,7 +6,7 @@ import {
   IconHome,
   IconFolder,
   IconTool,
-  IconPhone
+  IconPhone,
 } from "@tabler/icons-react";
 
 export const mappedIcons = {
@@ -49,18 +49,18 @@ export const MAPPED_PROFILE_LINKS: readonly ProfileLink[] = [
 export const MAPPED_NAVBAR_LINKS: readonly ProfileLink[] = [
   {
     icon: "home",
-    link: "",
+    link: "home",
   },
   {
     icon: "folder",
-    link: "",
+    link: "project",
   },
   {
     icon: "tool",
-    link: "",
+    link: "tools",
   },
   {
     icon: "phone",
-    link: "",
+    link: "contact",
   },
 ];

@@ -10,10 +10,10 @@ export default function HomePage() {
   return (
     <>
       <Stack gap={100}>
-        <HomeSection />
-        <ProjectSection />
-        <ToolsSection />
-        <ContactSection />
+        <HomeSection id="home" />
+        <ProjectSection id="project" />
+        <ToolsSection id="tools" />
+        <ContactSection id="contact" />
       </Stack>
     </>
   );
