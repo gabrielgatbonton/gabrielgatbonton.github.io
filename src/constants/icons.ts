@@ -22,7 +22,7 @@ export const mappedIcons = {
 
 export type IconType = keyof typeof mappedIcons;
 
-type ProfileLink = {
+export type ProfileLink = {
   icon: IconType;
   link: string;
 };
