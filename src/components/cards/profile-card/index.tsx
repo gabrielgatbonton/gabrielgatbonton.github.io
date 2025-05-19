@@ -1,5 +1,6 @@
 import portraitImg from "../../../assets/portrait.jpeg";
 import { Box, Group, Image, Text, Title } from "@mantine/core";
+import classes from "./styles.module.css";
 
 // Components
 import DefaultBorder from "../../default-border";
@@ -11,7 +12,7 @@ import { MAPPED_PROFILE_LINKS } from "../../../constants/icons";
 
 export default function ProfileCard() {
   return (
-    <DefaultBorder padding={36} radius={20} w={350} h={600}>
+    <DefaultBorder radius={20} responsiveClass={classes.responsiveCard}>
       <Image src={portraitImg} w="100%" h="auto" mb={24} radius={20} />
 
       <Title size={26} fw={700} ta="center" mb={8}>

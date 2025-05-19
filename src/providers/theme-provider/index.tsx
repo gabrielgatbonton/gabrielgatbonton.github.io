@@ -30,8 +30,8 @@ const theme = createTheme({
     sizes: {
       h1: { fontSize: "72px", fontWeight: "600", lineHeight: "115%" },
       h2: { fontSize: "64px", fontWeight: "600", lineHeight: "115%" },
-      h3: { fontSize: "48px", fontWeight: "700", lineHeight: "115%" },
-      h4: { fontSize: "20px", fontWeight: "700" },
+      h3: { fontSize: "48px", fontWeight: "600", lineHeight: "115%" },
+      h4: { fontSize: "20px", fontWeight: "600" },
     },
   },
 });

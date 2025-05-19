@@ -1,4 +1,4 @@
-import { AppShell, Box, Group } from "@mantine/core";
+import { AppShell, Box, Flex } from "@mantine/core";
 import { Outlet } from "react-router";
 import classes from "./App.module.css";
 
@@ -18,7 +18,14 @@ function App() {
 
       <Box h="100%" mt="5%">
         <MainContainer>
-          <Group h="100%" w="100%" align="start" wrap="nowrap" gap={100}>
+          <Flex
+            h="100%"
+            w="100%"
+            direction={{ base: "column", md: "row" }}
+            align="start"
+            wrap="nowrap"
+            gap={{ base: 80, xl: 100 }}
+          >
             {/* Sticky Profile */}
             <Box pos="sticky" top={40}>
               <ProfileCard />
@@ -27,7 +34,7 @@ function App() {
             <Box flex={1} py={50}>
               <Outlet />
             </Box>
-          </Group>
+          </Flex>
         </MainContainer>
       </Box>
     </AppShell>

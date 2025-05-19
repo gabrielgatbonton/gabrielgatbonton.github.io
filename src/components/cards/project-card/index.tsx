@@ -19,8 +19,6 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Card
-      w={300}
-      h={320}
       radius={20}
       bg="primaryColor"
       className={classes.card}
@@ -31,9 +29,6 @@ export default function ProjectCard({
         <Image
           src={imageOne}
           pos="absolute"
-          top={40}
-          left={-65}
-          w={300}
           className={clsx(classes.cardShadow, classes.backImage)}
         />
 
@@ -41,9 +36,6 @@ export default function ProjectCard({
         <Image
           src={imageTwo}
           pos="absolute"
-          top={130}
-          left={-35}
-          w={350}
           className={clsx(classes.cardShadow, classes.foreImage)}
         />
       </Box>
@@ -59,7 +51,9 @@ export default function ProjectCard({
         className={classes.sectionBlur}
       >
         <Stack gap={0}>
-          <Title order={4}>{title}</Title>
+          <Title order={4} fw={700}>
+            {title}
+          </Title>
           <Text size="md">{subtitle}</Text>
         </Stack>
       </Box>

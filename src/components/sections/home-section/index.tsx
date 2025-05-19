@@ -1,5 +1,8 @@
 import { HTMLAttributes } from "react";
-import { Text, Box, BoxProps, Title, Group } from "@mantine/core";
+import { Text, Box, BoxProps, Title, Group, TitleOrder } from "@mantine/core";
+
+// Hooks
+import { useMediaSelector } from "../../../hooks/useMediaSelector";
 
 // Components
 import StatCard from "../../cards/stat-card";
@@ -8,15 +11,19 @@ import ArrowButton from "../../buttons/arrow-button";
 
 // Constants
 import { MAPPED_STATS } from "../../../constants/data";
+import { RESPONSIVE_HEADLINE, TEXT_SIZE } from "../../../constants/responsive";
 
 type HomeSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
 export default function HomeSection({ ...props }: HomeSectionProps) {
+  const HEADLINE_ORDER = useMediaSelector<TitleOrder>(RESPONSIVE_HEADLINE);
   return (
     <Box {...props}>
       <Box mb={48}>
-        <Title mb={10}>Lorem ipsum dolor sit amet consecte. </Title>
-        <Text size="xl" fw={500} lh="115%" c="dimmed">
+        <Title order={HEADLINE_ORDER} mb={10}>
+          Lorem ipsum dolor sit amet consecte.{" "}
+        </Title>
+        <Text size={TEXT_SIZE} fw={500} lh="115%" c="dimmed">
           Lorem ipsum dolor sit amet consecte. Lorem ipsum dolor sit amet
           consecte. Lorem ipsum dolor sit amet consecte. Lorem ipsum dolor sit
           amet consecte.

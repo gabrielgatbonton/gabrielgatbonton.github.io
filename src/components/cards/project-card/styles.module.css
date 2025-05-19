@@ -3,6 +3,19 @@
   overflow: hidden;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
+
+  width: 100%;
+  height: rem(320px);
+
+  @media (min-width: $mantine-breakpoint-md) {
+    width: rem(250px);
+    height: rem(260px);
+  }
+
+  @media (min-width: $mantine-breakpoint-xl) {
+    width: rem(300px);
+    height: rem(320px);
+  }
 }
 
 .card:hover .backImage {
@@ -25,12 +38,28 @@
   z-index: 1;
   transform: rotate(-32deg);
   transition: transform 0.3s ease-in-out;
+  width: rem(270px);
+  top: rem(40px);
+  left: rem(-65px);
+
+  @media (min-width: $mantine-breakpoint-xl) {
+    width: rem(300px);
+  }
 }
 
 .foreImage {
   z-index: 2;
   transform: rotate(-24deg);
   transition: transform 0.3s ease-in-out;
+  width: rem(320px);
+  top: rem(110px);
+  left: rem(-55px);
+
+  @media (min-width: $mantine-breakpoint-xl) {
+    width: rem(350px);
+    top: rem(130px);
+    left: rem(-35px);
+  }
 }
 
 .sectionBlur {
