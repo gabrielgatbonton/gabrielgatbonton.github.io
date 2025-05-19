@@ -1,4 +1,5 @@
-import { Card, Stack, Box, BoxProps } from "@mantine/core";
+import { Card, Box, BoxProps, Flex } from "@mantine/core";
+import classes from "./styles.module.css";
 
 // Hooks
 import { useActiveSection } from "../../hooks/useActiveSection";
@@ -20,11 +21,16 @@ export default function Navbar({ ...props }: NavbarProps) {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   return (
     <Box {...props}>
-      <Card px={12} py={18} w={50} h="100%" shadow="xl" radius={15}>
-        <Stack gap={8} align="center" justify="center">
+      <Card className={classes.responsiveNav} shadow="xl" radius={15}>
+        <Flex
+          gap={8}
+          direction={{ base: "row", xl: "column" }}
+          align="center"
+          justify="center"
+        >
           {MAPPED_NAVBAR_LINKS.map(({ icon, link }) => (
             <IconButton
               key={icon}
@@ -34,7 +40,7 @@ export default function Navbar({ ...props }: NavbarProps) {
               onClick={() => scrollToSection(link)}
             />
           ))}
-        </Stack>
+        </Flex>
       </Card>
     </Box>
   );

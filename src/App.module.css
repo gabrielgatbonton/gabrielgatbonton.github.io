@@ -10,3 +10,30 @@
 .appShell {
   height: 100%;
 }
+
+.navbarPosition {
+  position: fixed;
+  z-index: 5;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    bottom: rem(20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $mantine-breakpoint-xl) {
+    bottom: auto;
+    top: 50%;
+    left: rem(40px);
+    transform: translateY(-50%);
+  }
+}
+
+.responsiveProfile {
+  position: relative;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    position: sticky;
+    top: rem(40px);
+  }
+}
