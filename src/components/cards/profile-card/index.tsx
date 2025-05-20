@@ -13,7 +13,15 @@ import { MAPPED_PROFILE_LINKS } from "../../../constants/icons";
 export default function ProfileCard() {
   return (
     <DefaultBorder radius={20} responsiveClass={classes.responsiveCard}>
-      <Image src={portraitImg} w="100%" h="auto" mb={24} radius={20} />
+      <Image
+        src={portraitImg}
+        w="100%"
+        maw={300}
+        mx="auto"
+        h="auto"
+        mb={24}
+        radius={20}
+      />
 
       <Title size={26} fw={700} ta="center" mb={8}>
         Gabriel Gatbonton
@@ -29,7 +37,12 @@ export default function ProfileCard() {
         </Text>
       </Box>
 
-      <Group justify="center" align="center" gap={16}>
+      <Group
+        justify="center"
+        align="center"
+        gap={16}
+        className={classes.profileLinks}
+      >
         {MAPPED_PROFILE_LINKS.map(({ icon }) => (
           <IconButton key={icon} icon={icon} />
         ))}

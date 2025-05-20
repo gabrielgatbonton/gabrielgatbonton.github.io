@@ -1,8 +1,8 @@
 import { HTMLAttributes } from "react";
-import { Box, BoxProps, Grid, TitleOrder } from "@mantine/core";
+import { Box, BoxProps, Grid } from "@mantine/core";
 
 // Hooks
-import { useMediaSelector } from "../../../hooks/useMediaSelector";
+import { useResponsiveValue } from "../../../hooks/useResponsiveValue";
 
 // Components
 import Headline from "../../headline";
@@ -10,12 +10,17 @@ import ToolCard from "../../cards/tool-card";
 
 // Constants
 import { MAPPED_TOOLS } from "../../../constants/data";
-import { RESPONSIVE_HEADLINE } from "../../../constants/responsive";
+import {
+  RESPONSIVE_HEADLINE,
+  RESPONSIVE_TEXT_ALIGN,
+} from "../../../constants/responsive";
 
 type ToolsSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
 export default function ToolsSection({ ...props }: ToolsSectionProps) {
-  const HEADLINE_ORDER = useMediaSelector<TitleOrder>(RESPONSIVE_HEADLINE);
+  // Responsive Values
+  const HEADLINE_ORDER = useResponsiveValue(RESPONSIVE_HEADLINE);
+  const TEXT_ALIGN = useResponsiveValue(RESPONSIVE_TEXT_ALIGN);
   return (
     <Box {...props}>
       <Headline
@@ -23,6 +28,7 @@ export default function ToolsSection({ ...props }: ToolsSectionProps) {
         title="The Engines Behind My Projects"
         highlight="Projects"
         order={HEADLINE_ORDER}
+        ta={TEXT_ALIGN}
       />
 
       <Grid>

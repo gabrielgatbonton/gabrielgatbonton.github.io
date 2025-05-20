@@ -1,4 +1,4 @@
-import { Stack } from "@mantine/core";
+import { Stack, useMatches } from "@mantine/core";
 
 // Components
 import HomeSection from "../../components/sections/home-section";
@@ -7,9 +7,14 @@ import ToolsSection from "../../components/sections/tools-section";
 import ContactSection from "../../components/sections/contact-section";
 
 export default function HomePage() {
+  const gap = useMatches({
+    base: 40,
+    md: 100,
+  });
+
   return (
     <>
-      <Stack gap={100}>
+      <Stack gap={gap}>
         <HomeSection id="home" />
         <ProjectSection id="project" />
         <ToolsSection id="tools" />

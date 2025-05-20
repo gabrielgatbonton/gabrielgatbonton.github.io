@@ -1,13 +1,28 @@
-import { DEFAULT_THEME } from "@mantine/core"
+import { TitleOrder, DEFAULT_THEME } from "@mantine/core";
 
-const theme = DEFAULT_THEME
+type BreakpointKey = keyof typeof DEFAULT_THEME.breakpoints;
+type TextAlign = 'left' | 'right' | 'center' | 'justify';
 
-export const RESPONSIVE_HEADLINE = {
-  breakpoint: "lg",
-  fnValue: (matches: boolean) => (matches ? 1 : 2),
-}
-export const FAQ_RESPONSIVE_HEADLINE = {
-  breakpoint: "lg",
-  fnValue: (matches: boolean) => (matches ? 2 : 3),
-}
-export const TEXT_SIZE = theme.breakpoints.md ? "lg" : "xl"
+export type ResponsiveMap<T> = Partial<Record<BreakpointKey, T>> & { base: T };
+
+export const RESPONSIVE_HEADLINE: ResponsiveMap<TitleOrder> = {
+  base: 3,
+  md: 2,
+  lg: 1,
+};
+
+export const RESPONSIVE_FAQ: ResponsiveMap<TitleOrder> = {
+  base: 4,
+  md: 3,
+  lg: 2,
+};
+
+export const RESPONSIVE_TEXT_ALIGN: ResponsiveMap<TextAlign> = {
+  base: "center",
+  md: "left",
+};
+
+export const RESPONSIVE_TEXT_SIZE: ResponsiveMap<BreakpointKey> = {
+  base: "lg",
+  lg: "xl",
+};

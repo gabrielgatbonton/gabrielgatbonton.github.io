@@ -1,9 +1,9 @@
 import { HTMLAttributes } from "react";
-import { Box, Group, BoxProps, TitleOrder } from "@mantine/core";
+import { Box, Group, BoxProps } from "@mantine/core";
 import { useNavigate } from "react-router";
 
 // Hooks
-import { useMediaSelector } from "../../../hooks/useMediaSelector";
+import { useResponsiveValue } from "../../../hooks/useResponsiveValue";
 
 // Components
 import Headline from "../../headline";
@@ -11,13 +11,19 @@ import ProjectCard from "../../cards/project-card";
 
 // Constants
 import { MAPPED_PROJECTS } from "../../../constants/data";
-import { RESPONSIVE_HEADLINE } from "../../../constants/responsive";
+import {
+  RESPONSIVE_HEADLINE,
+  RESPONSIVE_TEXT_ALIGN,
+} from "../../../constants/responsive";
 
 type ProjectSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
 export default function ProjectSection({ ...props }: ProjectSectionProps) {
   const navigate = useNavigate();
-  const HEADLINE_ORDER = useMediaSelector<TitleOrder>(RESPONSIVE_HEADLINE);
+
+  // Responsive Values
+  const HEADLINE_ORDER = useResponsiveValue(RESPONSIVE_HEADLINE);
+  const TEXT_ALIGN = useResponsiveValue(RESPONSIVE_TEXT_ALIGN);
 
   const handleProjectClick = (project: string) => {
     navigate(`/${project.toLowerCase()}`);
@@ -30,6 +36,7 @@ export default function ProjectSection({ ...props }: ProjectSectionProps) {
         highlight="Achievements"
         mb={42}
         order={HEADLINE_ORDER}
+        ta={TEXT_ALIGN}
       />
 
       <Group>

@@ -1,20 +1,23 @@
 .responsiveCard {
   width: 100%;
   height: 100%;
-  max-width: rem(400px);
+  max-width: rem(700px);
   padding: rem(28px);
 
   @media (min-width: $mantine-breakpoint-md) {
     width: rem(300px);
   }
 
-  @media (min-width: $mantine-breakpoint-lg) {
-    height: rem(500px);
-  }
-
   @media (min-width: $mantine-breakpoint-xl) {
     width: rem(350px);
-    height: rem(600px);
     padding: rem(36px);
+  }
+}
+
+.profileLinks {
+  margin-bottom: rem(24px);
+
+  @media (min-width: $mantine-breakpoint-lg) {
+    margin-bottom: rem(48px);
   }
 }

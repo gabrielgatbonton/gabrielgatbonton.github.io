@@ -51,7 +51,7 @@ export default function ProjectCard({
         className={classes.sectionBlur}
       >
         <Stack gap={0}>
-          <Title order={4} fw={700}>
+          <Title order={5} fw={700}>
             {title}
           </Title>
           <Text size="md">{subtitle}</Text>

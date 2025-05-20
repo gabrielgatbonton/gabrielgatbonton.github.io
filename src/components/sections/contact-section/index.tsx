@@ -1,8 +1,8 @@
 import { HTMLAttributes } from "react";
-import { Box, BoxProps, TitleOrder } from "@mantine/core";
+import { Box, BoxProps } from "@mantine/core";
 
 // Hooks
-import { useMediaSelector } from "../../../hooks/useMediaSelector";
+import { useResponsiveValue } from "../../../hooks/useResponsiveValue";
 
 // Components
 import Headline from "../../headline";
@@ -13,18 +13,18 @@ import DefaultAccordion from "../../default-accordion";
 import { MAPPED_FAQS } from "../../../constants/data";
 import {
   RESPONSIVE_HEADLINE,
-  FAQ_RESPONSIVE_HEADLINE,
+  RESPONSIVE_FAQ,
+  RESPONSIVE_TEXT_ALIGN,
 } from "../../../constants/responsive";
 
 type ContactSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
 export default function ContactSection({ ...props }: ContactSectionProps) {
-  const HEADLINE_ORDER = useMediaSelector<TitleOrder>(RESPONSIVE_HEADLINE);
-  const FAQ_HEADLINE_ORDER = useMediaSelector<TitleOrder>(
-    FAQ_RESPONSIVE_HEADLINE
-  );
+  const HEADLINE_ORDER = useResponsiveValue(RESPONSIVE_HEADLINE);
+  const FAQ_HEADLINE_ORDER = useResponsiveValue(RESPONSIVE_FAQ);
+  const TEXT_ALIGN = useResponsiveValue(RESPONSIVE_TEXT_ALIGN);
   return (
-    <Box {...props}>
+    <Box {...props} ta={TEXT_ALIGN}>
       <Headline
         title="Feeling up to it? Slide Into My Inbox"
         highlight="My Inbox"

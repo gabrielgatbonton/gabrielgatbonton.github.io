@@ -11,7 +11,7 @@ function App() {
     <AppShell padding="md" className={classes.appShell} pos="relative">
       <Navbar className={classes.navbarPosition} />
 
-      <Box h="100%" mt="5%">
+      <Box h="100%" py={100}>
         <MainContainer>
           <Flex
             h="100%"
@@ -19,14 +19,14 @@ function App() {
             direction={{ base: "column", md: "row" }}
             align={{ base: "center", md: "start" }}
             wrap="nowrap"
-            gap={{ base: 80, xl: 100 }}
+            gap={{ base: 40, md: 80, xl: 100 }}
           >
             {/* Sticky Profile */}
             <Box className={classes.responsiveProfile}>
               <ProfileCard />
             </Box>
 
-            <Box flex={1} py={50}>
+            <Box flex={1} className={classes.outletBox}>
               <Outlet />
             </Box>
           </Flex>

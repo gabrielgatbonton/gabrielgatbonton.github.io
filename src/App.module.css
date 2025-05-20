@@ -16,13 +16,12 @@
   z-index: 5;
 
   @media (min-width: $mantine-breakpoint-xs) {
-    bottom: rem(20px);
+    top: rem(20px);
     left: 50%;
     transform: translateX(-50%);
   }
 
   @media (min-width: $mantine-breakpoint-xl) {
-    bottom: auto;
     top: 50%;
     left: rem(40px);
     transform: translateY(-50%);
@@ -31,9 +30,21 @@
 
 .responsiveProfile {
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $mantine-breakpoint-md) {
+    width: auto;
     position: sticky;
     top: rem(40px);
+  }
+}
+
+.outletBox {
+  padding: 0;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    padding: rem(50px) 0;
   }
 }

@@ -1,8 +1,8 @@
 import { HTMLAttributes } from "react";
-import { Text, Box, BoxProps, Title, Group, TitleOrder } from "@mantine/core";
+import { Text, Box, BoxProps, Title, Flex } from "@mantine/core";
 
 // Hooks
-import { useMediaSelector } from "../../../hooks/useMediaSelector";
+import { useResponsiveValue } from "../../../hooks/useResponsiveValue";
 
 // Components
 import StatCard from "../../cards/stat-card";
@@ -11,17 +11,23 @@ import ArrowButton from "../../buttons/arrow-button";
 
 // Constants
 import { MAPPED_STATS } from "../../../constants/data";
-import { RESPONSIVE_HEADLINE, TEXT_SIZE } from "../../../constants/responsive";
+import {
+  RESPONSIVE_HEADLINE,
+  RESPONSIVE_TEXT_SIZE,
+  RESPONSIVE_TEXT_ALIGN,
+} from "../../../constants/responsive";
 
 type HomeSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
 export default function HomeSection({ ...props }: HomeSectionProps) {
-  const HEADLINE_ORDER = useMediaSelector<TitleOrder>(RESPONSIVE_HEADLINE);
+  const HEADLINE_ORDER = useResponsiveValue(RESPONSIVE_HEADLINE);
+  const TEXT_SIZE = useResponsiveValue(RESPONSIVE_TEXT_SIZE);
+  const TEXT_ALIGN = useResponsiveValue(RESPONSIVE_TEXT_ALIGN);
   return (
     <Box {...props}>
-      <Box mb={48}>
+      <Box mb={48} ta={TEXT_ALIGN}>
         <Title order={HEADLINE_ORDER} mb={10}>
-          Lorem ipsum dolor sit amet consecte.{" "}
+          Lorem ipsum dolor sit amet consecte.
         </Title>
         <Text size={TEXT_SIZE} fw={500} lh="115%" c="dimmed">
           Lorem ipsum dolor sit amet consecte. Lorem ipsum dolor sit amet
@@ -30,18 +36,18 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
         </Text>
       </Box>
 
-      <Group gap={32} mb={34}>
+      <Flex justify={{ base: "center", md: "start" }} gap={32} mb={34}>
         {MAPPED_STATS.map(({ value, label }) => (
           <StatCard key={label} value={value} label={label} />
         ))}
-      </Group>
+      </Flex>
 
-      <Group gap={16}>
+      <Flex justify={{ base: "center", md: "start" }} gap={16}>
         <PrimaryButton w={170} fw={600}>
           Get my Resume
         </PrimaryButton>
         <ArrowButton>My Work</ArrowButton>
-      </Group>
+      </Flex>
     </Box>
   );
 }
