@@ -33,7 +33,7 @@ export default function ToolsSection({ ...props }: ToolsSectionProps) {
 
       <Grid>
         {MAPPED_TOOLS.map((props) => (
-          <Grid.Col key={props.title} span={{ base: 12, sm: 6, lg: 4 }}>
+          <Grid.Col key={props.title} span={{ base: 12, sm: 6 }}>
             <ToolCard {...props} />
           </Grid.Col>
         ))}

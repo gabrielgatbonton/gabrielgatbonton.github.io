@@ -24,12 +24,13 @@ export default function ContactSection({ ...props }: ContactSectionProps) {
   const FAQ_HEADLINE_ORDER = useResponsiveValue(RESPONSIVE_FAQ);
   const TEXT_ALIGN = useResponsiveValue(RESPONSIVE_TEXT_ALIGN);
   return (
-    <Box {...props} ta={TEXT_ALIGN}>
+    <Box {...props}>
       <Headline
         title="Feeling up to it? Slide Into My Inbox"
         highlight="My Inbox"
         mb={42}
         order={HEADLINE_ORDER}
+        ta={TEXT_ALIGN}
       />
 
       <Box mb={42}>
@@ -41,6 +42,7 @@ export default function ContactSection({ ...props }: ContactSectionProps) {
         highlight="Questions"
         mb={42}
         order={FAQ_HEADLINE_ORDER}
+        ta={TEXT_ALIGN}
       />
 
       {/* FAQS */}

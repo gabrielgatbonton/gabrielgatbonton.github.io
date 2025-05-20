@@ -1,5 +1,6 @@
 import { HTMLAttributes } from "react";
 import { Text, Box, BoxProps, Title, Flex } from "@mantine/core";
+import classes from "./styles.module.css";
 
 // Hooks
 import { useResponsiveValue } from "../../../hooks/useResponsiveValue";
@@ -23,6 +24,12 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
   const HEADLINE_ORDER = useResponsiveValue(RESPONSIVE_HEADLINE);
   const TEXT_SIZE = useResponsiveValue(RESPONSIVE_TEXT_SIZE);
   const TEXT_ALIGN = useResponsiveValue(RESPONSIVE_TEXT_ALIGN);
+
+  const statCardClasses = {
+    responsiveCard: classes.responsiveCard,
+    responsiveTitle: classes.responsiveTitle,
+    responsiveText: classes.responsiveText,
+  };
   return (
     <Box {...props}>
       <Box mb={48} ta={TEXT_ALIGN}>
@@ -38,7 +45,7 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
 
       <Flex justify={{ base: "center", md: "start" }} gap={32} mb={34}>
         {MAPPED_STATS.map(({ value, label }) => (
-          <StatCard key={label} value={value} label={label} />
+          <StatCard key={label} value={value} label={label} classes={statCardClasses} />
         ))}
       </Flex>
 

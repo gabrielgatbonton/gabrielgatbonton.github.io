@@ -6,15 +6,30 @@ import DefaultBorder from "../../default-border";
 type StatCardProps = {
   value: string;
   label: string;
+  classes: {
+    responsiveCard: string;
+    responsiveTitle: string;
+    responsiveText: string;
+  };
 };
 
-export default function StatCard({ value, label }: StatCardProps) {
+export default function StatCard({ value, label, classes }: StatCardProps) {
   return (
-    <DefaultBorder px={24} py={18} radius={10} w={150} h={150}>
-      <Title ta="center" size={64} fw={700} c="primaryColor">
+    <DefaultBorder radius={10} responsiveClass={classes.responsiveCard}>
+      <Title
+        ta="center"
+        fw={700}
+        c="primaryColor"
+        className={classes.responsiveTitle}
+      >
         {value}
       </Title>
-      <Title size={16} fw={600} tt="uppercase" c="primaryColor">
+      <Title
+        fw={600}
+        tt="uppercase"
+        c="primaryColor"
+        className={classes.responsiveText}
+      >
         {label}
       </Title>
     </DefaultBorder>
