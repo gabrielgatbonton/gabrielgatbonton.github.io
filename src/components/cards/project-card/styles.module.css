@@ -6,6 +6,7 @@
 
   width: 100%;
   height: rem(320px);
+  max-width: rem(300px);
 
   @media (min-width: $mantine-breakpoint-md) {
     width: rem(250px);

@@ -14,12 +14,9 @@
 .navbarPosition {
   position: fixed;
   z-index: 5;
-
-  @media (min-width: $mantine-breakpoint-xs) {
-    top: rem(20px);
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  top: rem(20px);
+  left: 50%;
+  transform: translateX(-50%);
 
   @media (min-width: $mantine-breakpoint-xl) {
     top: 50%;

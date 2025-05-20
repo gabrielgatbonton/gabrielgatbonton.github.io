@@ -25,6 +25,12 @@ export const MAPPED_PROJECTS = [
     imageOne: ChimsOne,
     imageTwo: ChimsTwo,
   },
+  {
+    title: "CHIMS",
+    subtitle: "Vue.js",
+    imageOne: ChimsOne,
+    imageTwo: ChimsTwo,
+  },
 ];
 
 export const MAPPED_TOOLS = [

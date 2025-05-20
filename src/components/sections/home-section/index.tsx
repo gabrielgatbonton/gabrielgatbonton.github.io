@@ -43,9 +43,19 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
         </Text>
       </Box>
 
-      <Flex justify={{ base: "center", md: "start" }} gap={32} mb={34}>
+      <Flex
+        justify={{ base: "center", md: "start" }}
+        gap={{ base: 16, md: 32 }}
+        wrap="wrap"
+        mb={34}
+      >
         {MAPPED_STATS.map(({ value, label }) => (
-          <StatCard key={label} value={value} label={label} classes={statCardClasses} />
+          <StatCard
+            key={label}
+            value={value}
+            label={label}
+            classes={statCardClasses}
+          />
         ))}
       </Flex>
 

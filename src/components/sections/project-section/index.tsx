@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { Box, Group, BoxProps } from "@mantine/core";
+import { Box, Flex, BoxProps } from "@mantine/core";
 import { useNavigate } from "react-router";
 
 // Hooks
@@ -39,7 +39,12 @@ export default function ProjectSection({ ...props }: ProjectSectionProps) {
         ta={TEXT_ALIGN}
       />
 
-      <Group>
+      <Flex
+        justify={{ base: "center", md: "start" }}
+        align="center"
+        wrap="wrap"
+        gap={16}
+      >
         {MAPPED_PROJECTS.map((props) => (
           <ProjectCard
             key={props.title}
@@ -47,7 +52,7 @@ export default function ProjectSection({ ...props }: ProjectSectionProps) {
             onClick={() => handleProjectClick(props.title)}
           />
         ))}
-      </Group>
+      </Flex>
     </Box>
   );
 }
