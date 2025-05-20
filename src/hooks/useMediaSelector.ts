@@ -16,7 +16,5 @@ export function useMediaSelector<T>({
       : DEFAULT_THEME.breakpoints[breakpoint];
 
   const matches = useMediaQuery(`(min-width: ${queryValue})`);
-
-  console.log(matches);
   return fnValue(matches ?? false);
 }
