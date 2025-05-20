@@ -55,10 +55,10 @@ export default function ProjectPage() {
       </Group>
 
       <Grid gutter="lg" mb={60}>
-        <Grid.Col span={6}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
           <CredCard icon={IconImageInPicture} withBorder />
         </Grid.Col>
-        <Grid.Col span={6}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
           <CredCard icon={IconImageInPicture} />
         </Grid.Col>
       </Grid>
