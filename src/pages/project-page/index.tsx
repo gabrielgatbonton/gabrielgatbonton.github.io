@@ -1,5 +1,5 @@
-import { Box, Grid, Group, Image, Text, Title } from "@mantine/core";
-// import { useParams } from "react-router";
+import { Box, Grid, Group, Image, Text, Title, Flex } from "@mantine/core";
+import { useResponsiveValue } from "../../hooks/useResponsiveValue";
 import { useNavigate } from "react-router";
 
 // Components
@@ -10,6 +10,11 @@ import ProjectCard from "../../components/cards/project-card";
 
 // Constants
 import { MAPPED_PROJECTS } from "../../constants/data";
+import {
+  RESPONSIVE_PROJECT_HEADLINE,
+  RESPONSIVE_PROJECT_SUBTITLE,
+  RESPONSIVE_PROJECT_TEXT,
+} from "../../constants/responsive";
 
 // Temporary
 import ChimsOne from "../../assets/snapshots/chims_1.png";
@@ -17,7 +22,9 @@ import ChimsTwo from "../../assets/snapshots/chims_2.png";
 import { IconImageInPicture } from "@tabler/icons-react";
 
 export default function ProjectPage() {
-  // const { project } = useParams();
+  const HEADLINE_ORDER = useResponsiveValue(RESPONSIVE_PROJECT_HEADLINE);
+  const SUBTITLE_SIZE = useResponsiveValue(RESPONSIVE_PROJECT_SUBTITLE);
+  const TEXT_SIZE = useResponsiveValue(RESPONSIVE_PROJECT_TEXT);
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -33,15 +40,15 @@ export default function ProjectPage() {
       <Image mb={28} radius={20} src={ChimsTwo} />
 
       <Box mb={28}>
-        <Title order={3} fw={700} mb={4}>
+        <Title order={HEADLINE_ORDER} fw={700} mb={4}>
           Citizen's Health Information and Management System
         </Title>
-        <Text size="lg" fw={500} c="dimmed">
+        <Text size={SUBTITLE_SIZE} fw={500} c="dimmed">
           Vue.js
         </Text>
       </Box>
 
-      <Text mb={60} size="xl" c="dimmed" lh="115%">
+      <Text mb={60} size={TEXT_SIZE} c="dimmed" lh="115%">
         Lorem ipsum dolor sit amet consecte. Lorem ipsum dolor sit amet
         consecte. Lorem ipsum dolor sit amet consecte. Lorem ipsum dolor sit
         amet consecte.
@@ -55,10 +62,10 @@ export default function ProjectPage() {
       </Group>
 
       <Grid gutter="lg" mb={60}>
-        <Grid.Col span={{ base: 12, md: 6 }}>
+        <Grid.Col span={{ base: 12, sm: 6 }}>
           <CredCard icon={IconImageInPicture} withBorder />
         </Grid.Col>
-        <Grid.Col span={{ base: 12, md: 6 }}>
+        <Grid.Col span={{ base: 12, sm: 6 }}>
           <CredCard icon={IconImageInPicture} />
         </Grid.Col>
       </Grid>
@@ -72,11 +79,16 @@ export default function ProjectPage() {
         </Text>
       </Title>
 
-      <Group>
+      <Flex
+        justify={{ base: "center", md: "start" }}
+        align="center"
+        wrap="wrap"
+        gap={16}
+      >
         {MAPPED_PROJECTS.map((props) => (
           <ProjectCard key={props.title} {...props} />
         ))}
-      </Group>
+      </Flex>
     </Box>
   );
 }

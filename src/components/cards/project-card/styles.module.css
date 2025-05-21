@@ -6,9 +6,8 @@
 
   width: 100%;
   height: rem(320px);
-  max-width: rem(300px);
 
-  @media (min-width: $mantine-breakpoint-md) {
+  @media (min-width: $mantine-breakpoint-sm) {
     width: rem(250px);
     height: rem(260px);
   }
@@ -39,9 +38,13 @@
   z-index: 1;
   transform: rotate(-32deg);
   transition: transform 0.3s ease-in-out;
-  width: rem(270px);
+  width: 100%;
   top: rem(40px);
   left: rem(-65px);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    width: rem(270px);
+  }
 
   @media (min-width: $mantine-breakpoint-xl) {
     width: rem(300px);
@@ -52,9 +55,13 @@
   z-index: 2;
   transform: rotate(-24deg);
   transition: transform 0.3s ease-in-out;
-  width: rem(320px);
+  width: 100%;
   top: rem(110px);
   left: rem(-55px);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    width: rem(320px);
+  }
 
   @media (min-width: $mantine-breakpoint-xl) {
     width: rem(350px);

@@ -1,5 +1,9 @@
 .responsiveContainer {
-  max-width: rem(1092px);
+  max-width: rem(768px);
+
+  @media (min-width: $mantine-breakpoint-md) {
+    max-width: rem(1092px);
+  }
 
   @media (min-width: $mantine-breakpoint-xl) {
     max-width: rem(1280px);
