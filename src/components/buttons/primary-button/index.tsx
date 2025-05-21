@@ -1,9 +1,11 @@
 import { Button, ButtonProps } from "@mantine/core";
+import { ComponentProps } from "react";
 
-type PrimaryButtonProps = ButtonProps & {
-  children: React.ReactNode;
-  onClick?: () => void;
-};
+type PrimaryButtonProps = ButtonProps &
+  ComponentProps<"button"> & {
+    children: React.ReactNode;
+    onClick?: () => void;
+  };
 
 export default function PrimaryButton({
   children,

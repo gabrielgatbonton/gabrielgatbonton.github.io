@@ -6,4 +6,8 @@
   &:focus {
     border-color: var(--mantine-color-primaryColor-5);
   }
+
+  &[data-invalid] {
+    border-color: var(--mantine-color-red-6);
+  }
 }
