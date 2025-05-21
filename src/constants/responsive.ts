@@ -41,3 +41,8 @@ export const RESPONSIVE_TEXT_SIZE: ResponsiveMap<BreakpointKey> = {
   base: "lg",
   lg: "xl",
 };
+
+export const RESPONSIVE_STACK_GAP: ResponsiveMap<number> = {
+  base: 40,
+  md: 100,
+};

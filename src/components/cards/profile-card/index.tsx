@@ -10,6 +10,9 @@ import PrimaryButton from "../../buttons/primary-button";
 // Constants
 import { MAPPED_PROFILE_LINKS } from "../../../constants/icons";
 
+// Functions
+import { scrollToSection } from "../../../utils/functions";
+
 export default function ProfileCard() {
   return (
     <DefaultBorder radius={20} responsiveClass={classes.responsiveCard}>
@@ -48,7 +51,13 @@ export default function ProfileCard() {
         ))}
       </Group>
 
-      <PrimaryButton mx="auto" mt="auto" w={160} fw={500}>
+      <PrimaryButton
+        mx="auto"
+        mt="auto"
+        w={160}
+        fw={500}
+        onClick={() => scrollToSection("contact")}
+      >
         Let's Talk
       </PrimaryButton>
     </DefaultBorder>

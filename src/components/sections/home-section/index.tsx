@@ -18,6 +18,9 @@ import {
   RESPONSIVE_TEXT_ALIGN,
 } from "../../../constants/responsive";
 
+// Functions
+import { scrollToSection } from "../../../utils/functions";
+
 type HomeSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
 export default function HomeSection({ ...props }: HomeSectionProps) {
@@ -63,7 +66,9 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
         <PrimaryButton w={170} fw={600}>
           Get my Resume
         </PrimaryButton>
-        <ArrowButton>My Work</ArrowButton>
+        <ArrowButton onClick={() => scrollToSection("project")}>
+          My Work
+        </ArrowButton>
       </Flex>
     </Box>
   );

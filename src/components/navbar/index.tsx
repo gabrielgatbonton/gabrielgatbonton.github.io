@@ -10,17 +10,13 @@ import IconButton from "../buttons/icon-button";
 // Constants
 import { MAPPED_NAVBAR_LINKS } from "../../constants/icons";
 
+// Functions
+import { scrollToSection } from "../../utils/functions";
+
 type NavbarProps = BoxProps & {};
 
 export default function Navbar({ ...props }: NavbarProps) {
   const active = useActiveSection(MAPPED_NAVBAR_LINKS);
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <Box {...props}>
