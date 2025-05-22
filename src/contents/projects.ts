@@ -8,6 +8,13 @@ import ChimsPublicThree from "../assets/snapshots/chims/public-3.png";
 import ChimsView from "../assets/snapshots/chims/view.png";
 
 // HRBMS
+import HrbmsPublic from "../assets/snapshots/hrbms/public.png";
+import HrbmsLoginGuest from "../assets/snapshots/hrbms/login-guest.png";
+import HrbmsAccount from "../assets/snapshots/hrbms/account.png";
+import HrbmsDashboard from "../assets/snapshots/hrbms/dashboard.png";
+import HrbmsTransactions from "../assets/snapshots/hrbms/transactions.png";
+import HrbmsGuests from "../assets/snapshots/hrbms/guests.png";
+import HrbmsCategories from "../assets/snapshots/hrbms/categories.png";
 
 export const MAPPED_PROJECT_CARDS = [
   {
@@ -42,8 +49,8 @@ export const MAPPED_PROJECT_CARDS = [
     id: 5,
     title: "HRBMS",
     subtitle: "Vuejs",
-    imageOne: ChimsCitizen,
-    imageTwo: ChimsLogin,
+    imageOne: HrbmsPublic,
+    imageTwo: HrbmsLoginGuest,
   },
 ];
 
@@ -87,12 +94,12 @@ export const MAPPED_PROJECTS = [
   },
   {
     id: 2,
-    PrimaryImage: ChimsLogin,
+    PrimaryImage: HrbmsLoginGuest,
     title: "Hotel Room Booking Management System",
     keyword: "hrbms",
     subtitle: "Vuejs",
     description:
-      "A user-friendly web application built for the Office of the Special Adviser for Flagship Programs for Health (OSAFPH) to manage citizen data and healthcare services. Key features include bio-data management, dialysis queuing, and automated citizen ID card generation, enabling efficient and organized service delivery.",
+      "A comprehensive Vue.js-based solution for hotel operations—supporting booking management, guest services, transactions, and reporting—built for Systems Plus College Foundation’s College of Hospitality and Tourism Management to help students practice real-world hospitality workflows.",
     live: null,
     creds: [
       {
@@ -108,12 +115,12 @@ export const MAPPED_PROJECTS = [
       },
     ],
     images: [
-      ChimsCitizen,
-      ChimsView,
-      ChimsDialysis,
-      ChimsPublicOne,
-      ChimsPublicTwo,
-      ChimsPublicThree,
+      HrbmsPublic,
+      HrbmsAccount,
+      HrbmsDashboard,
+      HrbmsTransactions,
+      HrbmsGuests,
+      HrbmsCategories,
     ],
   },
 ];
