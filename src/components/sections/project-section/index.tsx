@@ -16,7 +16,7 @@ import {
 } from "../../../constants/responsive";
 
 // Contents
-import { MAPPED_PROJECTS } from "../../../contents/projects";
+import { MAPPED_PROJECT_CARDS } from "../../../contents/projects";
 
 type ProjectSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
@@ -47,7 +47,7 @@ export default function ProjectSection({ ...props }: ProjectSectionProps) {
         wrap="wrap"
         gap={16}
       >
-        {MAPPED_PROJECTS.map((props) => (
+        {MAPPED_PROJECT_CARDS.map((props) => (
           <ProjectCard
             key={props.id}
             {...props}

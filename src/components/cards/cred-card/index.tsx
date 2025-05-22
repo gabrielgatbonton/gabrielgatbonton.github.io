@@ -5,13 +5,15 @@ import clsx from "clsx";
 
 type CredCardProps = {
   icon: TablerIcon;
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   withBorder?: boolean;
 };
 
 export default function CredCard({
   icon: IconComponent,
+  title,
+  description,
   withBorder = false,
 }: CredCardProps) {
   return (
@@ -36,10 +38,10 @@ export default function CredCard({
       </Box>
       <Box mt="auto">
         <Title size={32} fw={600} mb={8} c={!withBorder ? "white" : undefined}>
-          Branding
+          {title}
         </Title>
         <Text fw={500} c={withBorder ? "dimmed" : "white"}>
-          Logo design, brand strategy, and visual identity development.
+          {description}
         </Text>
       </Box>
     </Card>
