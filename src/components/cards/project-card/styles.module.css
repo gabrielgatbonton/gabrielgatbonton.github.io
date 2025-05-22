@@ -73,6 +73,6 @@
 .sectionBlur {
   z-index: 3;
   backdrop-filter: blur(16px);
-  background: rgba(255, 237, 237, 0.37);
+  background: rgba(255, 237, 237, 0.3);
   color: var(--mantine-color-white);
 }

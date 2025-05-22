@@ -10,12 +10,14 @@ import ContactForm from "../../forms/contact-form";
 import DefaultAccordion from "../../default-accordion";
 
 // Constants
-import { MAPPED_FAQS } from "../../../constants/data";
 import {
   RESPONSIVE_HEADLINE,
   RESPONSIVE_FAQ,
   RESPONSIVE_TEXT_ALIGN,
 } from "../../../constants/responsive";
+
+// Contents
+import { MAPPED_FAQS } from "../../../contents/faqs";
 
 type ContactSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 

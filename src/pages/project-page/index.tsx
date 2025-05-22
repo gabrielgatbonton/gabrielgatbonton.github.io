@@ -9,12 +9,14 @@ import CredCard from "../../components/cards/cred-card";
 import ProjectCard from "../../components/cards/project-card";
 
 // Constants
-import { MAPPED_PROJECTS } from "../../constants/data";
 import {
   RESPONSIVE_PROJECT_HEADLINE,
   RESPONSIVE_PROJECT_SUBTITLE,
   RESPONSIVE_PROJECT_TEXT,
 } from "../../constants/responsive";
+
+// Contents
+import { MAPPED_PROJECTS } from "../../contents/projects";
 
 // Temporary
 import ChimsOne from "../../assets/snapshots/chims_1.png";

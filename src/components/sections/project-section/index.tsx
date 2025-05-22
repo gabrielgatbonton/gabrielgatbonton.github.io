@@ -10,11 +10,13 @@ import Headline from "../../headline";
 import ProjectCard from "../../cards/project-card";
 
 // Constants
-import { MAPPED_PROJECTS } from "../../../constants/data";
 import {
   RESPONSIVE_HEADLINE,
   RESPONSIVE_TEXT_ALIGN,
 } from "../../../constants/responsive";
+
+// Contents
+import { MAPPED_PROJECTS } from "../../../contents/projects";
 
 type ProjectSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
@@ -47,7 +49,7 @@ export default function ProjectSection({ ...props }: ProjectSectionProps) {
       >
         {MAPPED_PROJECTS.map((props) => (
           <ProjectCard
-            key={props.title}
+            key={props.id}
             {...props}
             onClick={() => handleProjectClick(props.title)}
           />

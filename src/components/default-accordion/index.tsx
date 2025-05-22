@@ -4,7 +4,7 @@ import { useState } from "react";
 import clsx from "clsx";
 
 // Types
-import { FaqItem } from "../../constants/data";
+import { FaqItem } from "../../contents/faqs";
 
 type DefaultAccordionProps = {
   value: FaqItem[];

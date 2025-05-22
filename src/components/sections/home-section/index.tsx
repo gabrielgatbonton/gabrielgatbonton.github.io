@@ -11,7 +11,7 @@ import PrimaryButton from "../../buttons/primary-button";
 import ArrowButton from "../../buttons/arrow-button";
 
 // Constants
-import { MAPPED_STATS } from "../../../constants/data";
+import { MAPPED_STATS } from "../../../contents/stats";
 import {
   RESPONSIVE_HEADLINE,
   RESPONSIVE_TEXT_SIZE,

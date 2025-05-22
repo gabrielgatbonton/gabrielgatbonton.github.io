@@ -9,11 +9,13 @@ import Headline from "../../headline";
 import ToolCard from "../../cards/tool-card";
 
 // Constants
-import { MAPPED_TOOLS } from "../../../constants/data";
 import {
   RESPONSIVE_HEADLINE,
   RESPONSIVE_TEXT_ALIGN,
 } from "../../../constants/responsive";
+
+// Contents
+import { MAPPED_TOOLS } from "../../../contents/tools";
 
 type ToolsSectionProps = BoxProps & HTMLAttributes<HTMLDivElement>;
 
