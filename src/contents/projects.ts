@@ -1,11 +1,11 @@
 // CHIMS
-import ChimsCitizen from "../assets/snapshots/citizens.png";
-import ChimsLogin from "../assets/snapshots/login.png";
-import ChimsDialysis from "../assets/snapshots/dialysis.png";
-import ChimsPublicOne from "../assets/snapshots/public.png";
-import ChimsPublicTwo from "../assets/snapshots/public-2.png";
-import ChimsPublicThree from "../assets/snapshots/public-3.png";
-import ChimsView from "../assets/snapshots/view.png";
+import ChimsCitizen from "../assets/snapshots/chims/citizens.png";
+import ChimsLogin from "../assets/snapshots/chims/login.png";
+import ChimsDialysis from "../assets/snapshots/chims/dialysis.png";
+import ChimsPublicOne from "../assets/snapshots/chims/public.png";
+import ChimsPublicTwo from "../assets/snapshots/chims/public-2.png";
+import ChimsPublicThree from "../assets/snapshots/chims/public-3.png";
+import ChimsView from "../assets/snapshots/chims/view.png";
 
 // HRBMS
 
@@ -59,6 +59,37 @@ export const MAPPED_PROJECTS = [
     PrimaryImage: ChimsLogin,
     title: "Citizen's Health Information and Management System",
     keyword: "chims",
+    subtitle: "Vuejs",
+    description:
+      "A user-friendly web application built for the Office of the Special Adviser for Flagship Programs for Health (OSAFPH) to manage citizen data and healthcare services. Key features include bio-data management, dialysis queuing, and automated citizen ID card generation, enabling efficient and organized service delivery.",
+    live: null,
+    creds: [
+      {
+        icon: IconTagFilled,
+        title: "Branding",
+        description:
+          "Layout Design, User Experience, Accessibility, Identity Development.",
+      },
+      {
+        icon: IconCode,
+        title: "Development",
+        description: devDescription("Vuejs"),
+      },
+    ],
+    images: [
+      ChimsCitizen,
+      ChimsView,
+      ChimsDialysis,
+      ChimsPublicOne,
+      ChimsPublicTwo,
+      ChimsPublicThree,
+    ],
+  },
+  {
+    id: 2,
+    PrimaryImage: ChimsLogin,
+    title: "Hotel Room Booking Management System",
+    keyword: "hrbms",
     subtitle: "Vuejs",
     description:
       "A user-friendly web application built for the Office of the Special Adviser for Flagship Programs for Health (OSAFPH) to manage citizen data and healthcare services. Key features include bio-data management, dialysis queuing, and automated citizen ID card generation, enabling efficient and organized service delivery.",

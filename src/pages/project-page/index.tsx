@@ -31,7 +31,6 @@ import { MAPPED_PROJECTS } from "../../contents/projects";
 // Motions
 import MotionBox from "../../animations/MotionBox";
 import { fadeDown } from "../../constants/motions";
-import { nav } from "motion/react-client";
 
 export default function ProjectPage() {
   const { project } = useParams();
