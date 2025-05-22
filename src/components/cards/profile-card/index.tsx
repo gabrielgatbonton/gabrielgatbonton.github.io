@@ -46,8 +46,14 @@ export default function ProfileCard() {
         gap={16}
         className={classes.profileLinks}
       >
-        {MAPPED_PROFILE_LINKS.map(({ icon }) => (
-          <IconButton key={icon} icon={icon} />
+        {MAPPED_PROFILE_LINKS.map(({ icon, link }) => (
+          <IconButton
+            key={icon}
+            icon={icon}
+            component="a"
+            href={link}
+            target="_blank"
+          />
         ))}
       </Group>
 

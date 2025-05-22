@@ -1,14 +1,21 @@
-import { ActionIcon } from "@mantine/core";
+import {
+  ActionIcon,
+  ActionIconProps,
+  PolymorphicComponentProps,
+} from "@mantine/core";
 import { mappedIcons, IconType } from "../../../constants/icons";
 import classes from "./styles.module.css";
 import { useHover } from "@mantine/hooks";
 import clsx from "clsx";
 
-type IconButtonProps = {
+type IconButtonProps = ActionIconProps & {
   icon: IconType;
   defaultColor?: string;
   active?: boolean;
   onClick?: () => void;
+  component?: PolymorphicComponentProps<"a">["component"];
+  href?: PolymorphicComponentProps<"a">["href"];
+  target?: PolymorphicComponentProps<"a">["target"];
 };
 
 export default function IconButton({
@@ -16,6 +23,10 @@ export default function IconButton({
   defaultColor = "#222120",
   active,
   onClick,
+  component,
+  href,
+  target,
+  ...props
 }: IconButtonProps) {
   const IconComponent = mappedIcons[icon];
   const { hovered, ref } = useHover();
@@ -48,6 +59,10 @@ export default function IconButton({
         [classes.filledHovered]: hovered && variant === "filled",
       })}
       onClick={onClick}
+      component={component}
+      href={href}
+      target={target}
+      {...props}
     >
       <IconComponent style={{ width: "80%", height: "80%" }} />
     </ActionIcon>

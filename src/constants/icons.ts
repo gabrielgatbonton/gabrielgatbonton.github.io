@@ -30,19 +30,19 @@ export type ProfileLink = {
 export const MAPPED_PROFILE_LINKS: readonly ProfileLink[] = [
   {
     icon: "github",
-    link: "",
+    link: "https://github.com/gabrielgatbonton",
   },
   {
     icon: "instagram",
-    link: "",
+    link: "https://www.instagram.com/gatboosted",
   },
   {
     icon: "linkedin",
-    link: "",
+    link: "https://www.linkedin.com/in/gabrielgatbonton/",
   },
   {
     icon: "email",
-    link: "",
+    link: "mailto:ggatbonton.cs@gmail.com",
   },
 ];
 
