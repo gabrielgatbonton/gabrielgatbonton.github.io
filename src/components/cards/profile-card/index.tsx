@@ -1,4 +1,4 @@
-import portraitImg from "../../../assets/portrait.jpeg";
+import portraitImg from "../../../assets/portrait.png";
 import { Box, Group, Image, Text, Title } from "@mantine/core";
 import classes from "./styles.module.css";
 
@@ -32,7 +32,7 @@ export default function ProfileCard() {
 
       <Box mb={24}>
         <Text ta="center" size="md" c="dimmed">
-          Web Developer
+          Web & Mobile Developer
         </Text>
 
         <Text ta="center" size="md" c="dimmed">
