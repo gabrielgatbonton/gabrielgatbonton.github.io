@@ -16,6 +16,15 @@ import HrbmsTransactions from "../assets/snapshots/hrbms/transactions.png";
 import HrbmsGuests from "../assets/snapshots/hrbms/guests.png";
 import HrbmsCategories from "../assets/snapshots/hrbms/categories.png";
 
+// DeepFake
+import DeepFakeHome from "../assets/snapshots/deepfake/home.png";
+import DeepFakeAboutOne from "../assets/snapshots/deepfake/about.png";
+import DeepFakeAboutTwo from "../assets/snapshots/deepfake/about-2.png";
+import DeepFakeAboutThree from "../assets/snapshots/deepfake/about-3.png";
+import DeepFakeAboutFour from "../assets/snapshots/deepfake/about-4.png";
+import DeepFakeDetecting from "../assets/snapshots/deepfake/detecting.png";
+import DeepFakeDetected from "../assets/snapshots/deepfake/detected.png";
+
 export const MAPPED_PROJECT_CARDS = [
   {
     id: 1,
@@ -35,8 +44,8 @@ export const MAPPED_PROJECT_CARDS = [
     id: 3,
     title: "DeepFake",
     subtitle: "Reactjs",
-    imageOne: ChimsCitizen,
-    imageTwo: ChimsLogin,
+    imageOne: DeepFakeDetected,
+    imageTwo: DeepFakeAboutOne,
   },
   {
     id: 4,
@@ -121,6 +130,37 @@ export const MAPPED_PROJECTS = [
       HrbmsTransactions,
       HrbmsGuests,
       HrbmsCategories,
+    ],
+  },
+  {
+    id: 3,
+    PrimaryImage: DeepFakeHome,
+    title: "DeepFake Detection",
+    keyword: "deepfake",
+    subtitle: "Reactjs",
+    description:
+      "A React-based frontend application for a deepfake detection project—built with Mantine, React Router, Zustand, and Axios—developed under Systems Plus College Foundation's College of Computing and Information Sciences to combat misinformation on social media by detecting deepfakes in uploaded videos and images. The project is also planned for donation to CHED Region 3 in the Philippines.",
+    live: null,
+    creds: [
+      {
+        icon: IconTagFilled,
+        title: "Branding",
+        description:
+          "Layout Design, User Experience, Accessibility, Identity Development.",
+      },
+      {
+        icon: IconCode,
+        title: "Development",
+        description: devDescription("Reactjs"),
+      },
+    ],
+    images: [
+      DeepFakeDetecting,
+      DeepFakeDetected,
+      DeepFakeAboutOne,
+      DeepFakeAboutTwo,
+      DeepFakeAboutThree,
+      DeepFakeAboutFour,
     ],
   },
 ];
