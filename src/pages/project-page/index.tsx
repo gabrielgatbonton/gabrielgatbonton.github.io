@@ -7,6 +7,7 @@ import {
   Title,
   Flex,
   Stack,
+  Anchor,
 } from "@mantine/core";
 import { useResponsiveValue } from "../../hooks/useResponsiveValue";
 import { useNavigate, useParams } from "react-router";
@@ -97,9 +98,12 @@ export default function ProjectPage() {
 
         {PROJECT.live && (
           <Group mb={36}>
-            <PrimaryButton w={166} fw={500}>
-              View Live
-            </PrimaryButton>
+            <Anchor target="_blank" href={PROJECT.live}>
+              <PrimaryButton w={166} fw={500}>
+                View Live
+              </PrimaryButton>
+            </Anchor>
+
             <ArrowButton onClick={handleBack}>See More Projects</ArrowButton>
           </Group>
         )}

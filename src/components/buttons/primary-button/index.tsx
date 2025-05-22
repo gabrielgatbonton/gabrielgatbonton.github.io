@@ -10,6 +10,7 @@ type PrimaryButtonProps = ButtonProps &
 export default function PrimaryButton({
   children,
   onClick,
+
   ...props
 }: PrimaryButtonProps) {
   return (

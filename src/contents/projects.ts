@@ -25,6 +25,12 @@ import DeepFakeAboutFour from "../assets/snapshots/deepfake/about-4.png";
 import DeepFakeDetecting from "../assets/snapshots/deepfake/detecting.png";
 import DeepFakeDetected from "../assets/snapshots/deepfake/detected.png";
 
+// EaseMind
+import EaseMindHome from "../assets/snapshots/easemind/home.png";
+import EaseMindAbout from "../assets/snapshots/easemind/about.png";
+import EaseMindInternetIdentity from "../assets/snapshots/easemind/internet-identity.png";
+import EaseMindLogin from "../assets/snapshots/easemind/login.png";
+
 export const MAPPED_PROJECT_CARDS = [
   {
     id: 1,
@@ -37,8 +43,8 @@ export const MAPPED_PROJECT_CARDS = [
     id: 2,
     title: "EaseMind",
     subtitle: "Reactjs",
-    imageOne: ChimsCitizen,
-    imageTwo: ChimsLogin,
+    imageOne: EaseMindLogin,
+    imageTwo: EaseMindHome,
   },
   {
     id: 3,
@@ -162,5 +168,29 @@ export const MAPPED_PROJECTS = [
       DeepFakeAboutThree,
       DeepFakeAboutFour,
     ],
+  },
+  {
+    id: 4,
+    PrimaryImage: EaseMindHome,
+    title: "EaseMind",
+    keyword: "easemind",
+    subtitle: "Reactjs",
+    description:
+      "EaseMind is a student-led platform for open emotional expression and peer support, promoting mental health in a secure digital space. Built with Mantine, React Router, Zustand, lightGallery, and Firebase for real-time chat, it also integrates ICP blockchain to protect user data and interactions.",
+    live: "https://llvrf-giaaa-aaaal-amqwa-cai.icp0.io/",
+    creds: [
+      {
+        icon: IconTagFilled,
+        title: "Branding",
+        description:
+          "Layout Design, User Experience, Accessibility, Identity Development.",
+      },
+      {
+        icon: IconCode,
+        title: "Development",
+        description: devDescription("Reactjs"),
+      },
+    ],
+    images: [EaseMindAbout, EaseMindInternetIdentity, EaseMindLogin],
   },
 ];
