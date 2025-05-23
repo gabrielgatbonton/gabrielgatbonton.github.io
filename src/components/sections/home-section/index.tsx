@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { Text, Box, BoxProps, Title, Flex } from "@mantine/core";
+import { Text, Box, BoxProps, Flex } from "@mantine/core";
 import classes from "./styles.module.css";
 
 // Hooks
