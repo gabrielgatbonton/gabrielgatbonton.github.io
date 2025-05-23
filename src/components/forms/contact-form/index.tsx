@@ -1,13 +1,19 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Stack, TextInput, Textarea } from "@mantine/core";
-import { useForm } from "@mantine/form";
-import { isEmail, isNotEmpty, hasLength } from "@mantine/form";
+import { useForm, isEmail, isNotEmpty, hasLength } from "@mantine/form";
+import { notifications } from "@mantine/notifications";
 import classes from "./styles.module.css";
 
 // Components
 import DefaultBorder from "../../default-border";
 import PrimaryButton from "../../buttons/primary-button";
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
 export default function ContactForm() {
+  const [loading, setLoading] = useState<boolean>(false);
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
@@ -24,9 +30,44 @@ export default function ContactForm() {
       ),
     },
   });
+
+  const sendEmail = async (values: typeof form.values) => {
+    setLoading(true);
+    try {
+      const timestamp = new Date().toLocaleString(); // or use .toISOString() for UTC
+
+      const payload = {
+        ...values,
+        time: timestamp,
+      };
+
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        payload
+      );
+
+      if (result.status === 200) {
+        notifications.show({
+          title: "Email Sent",
+          message: "Your message has been sent successfully.",
+          color: "teal",
+        });
+        form.reset();
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      notifications.show({
+        title: "Error Sending Email",
+        message: "An error occurred while sending your message.",
+        color: "red",
+      });
+    }
+    setLoading(false);
+  };
   return (
     <DefaultBorder padding={20} radius={20}>
-      <form onSubmit={form.onSubmit((values) => console.log(values))}>
+      <form onSubmit={form.onSubmit((values) => sendEmail(values))}>
         <Stack>
           <TextInput
             size="md"
@@ -63,7 +104,7 @@ export default function ContactForm() {
             {...form.getInputProps("message")}
             data-invalid={form.errors.message ?? undefined}
           />
-          <PrimaryButton size="md" type="submit">
+          <PrimaryButton loading={loading} size="md" type="submit">
             Send
           </PrimaryButton>
         </Stack>

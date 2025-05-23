@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { AppShell, Box, Flex } from "@mantine/core";
 import { Outlet, useLocation } from "react-router";
 import { ScrollRestoration } from "react-router";
 import classes from "./App.module.css";
+import emailjs from "@emailjs/browser";
 
 // Components
 import MainContainer from "./components/main-container";
@@ -15,6 +17,9 @@ import { fadeDown } from "./constants/motions";
 // Utils
 import { isMatchedPath } from "./utils/functions";
 
+// Options
+import { options } from "./constants/emailjs";
+
 const REVERSED_DIRECTION_ROUTES = ["/:project"];
 
 function App() {
@@ -22,6 +27,10 @@ function App() {
   const isReversedDirection = REVERSED_DIRECTION_ROUTES.some((pattern) =>
     isMatchedPath(pattern, location.pathname)
   );
+
+  useEffect(() => {
+    emailjs.init(options);
+  }, []);
 
   return (
     <AppShell padding="md" className={classes.appShell} pos="relative">
