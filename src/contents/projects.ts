@@ -31,13 +31,21 @@ import EaseMindAbout from "../assets/snapshots/easemind/about.png";
 import EaseMindInternetIdentity from "../assets/snapshots/easemind/internet-identity.png";
 import EaseMindLogin from "../assets/snapshots/easemind/login.png";
 
+// QuickGlance
+import QuickGlanceCover from "../assets/snapshots/quickglance/cover.png";
+import QuickGlanceCloseup from "../assets/snapshots/quickglance/closeup.png";
+import QuickGlanceHome from "../assets/snapshots/quickglance/home.png";
+import QuickGlanceSelection from "../assets/snapshots/quickglance/selection.png";
+import QuickGlanceFeatures from "../assets/snapshots/quickglance/features.png";
+import QuickGlanceAutomation from "../assets/snapshots/quickglance/automation.png";
+
 export const MAPPED_PROJECT_CARDS = [
   {
     id: 1,
     title: "QuickGlance",
     subtitle: "React Native",
-    imageOne: ChimsCitizen,
-    imageTwo: ChimsLogin,
+    imageOne: QuickGlanceCover,
+    imageTwo: QuickGlanceCloseup,
   },
   {
     id: 2,
@@ -74,6 +82,9 @@ import { IconTagFilled, IconCode } from "@tabler/icons-react";
 
 const devDescription = (tool: string) =>
   `Interactive and dynamic website development using ${tool}`;
+
+const devDescriptionMobile = (tool: string) =>
+  `Interactive and dynamic mobile application development using ${tool}`;
 
 export const MAPPED_PROJECTS = [
   {
@@ -192,5 +203,34 @@ export const MAPPED_PROJECTS = [
       },
     ],
     images: [EaseMindAbout, EaseMindInternetIdentity, EaseMindLogin],
+  },
+  {
+    id: 5,
+    PrimaryImage: QuickGlanceCover,
+    title: "QuickGlance",
+    keyword: "quickglance",
+    subtitle: "React Native",
+    description:
+      "EaseMind is a student-led platform for open emotional expression and peer support, promoting mental health in a secure digital space. Built with Mantine, React Router, Zustand, lightGallery, and Firebase for real-time chat, it also integrates ICP blockchain to protect user data and interactions.",
+    live: null,
+    creds: [
+      {
+        icon: IconTagFilled,
+        title: "Branding",
+        description:
+          "Layout Design, User Experience, Accessibility, Identity Development.",
+      },
+      {
+        icon: IconCode,
+        title: "Development",
+        description: devDescriptionMobile("React Native"),
+      },
+    ],
+    images: [
+      QuickGlanceHome,
+      QuickGlanceSelection,
+      QuickGlanceFeatures,
+      QuickGlanceAutomation,
+    ],
   },
 ];

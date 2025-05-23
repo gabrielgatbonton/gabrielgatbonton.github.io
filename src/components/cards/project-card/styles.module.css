@@ -56,11 +56,13 @@
   transform: rotate(-24deg);
   transition: transform 0.3s ease-in-out;
   width: 100%;
+
   top: rem(110px);
   left: rem(-55px);
 
   @media (min-width: $mantine-breakpoint-sm) {
     width: rem(320px);
+    max-height: rem(190px);
   }
 
   @media (min-width: $mantine-breakpoint-xl) {
