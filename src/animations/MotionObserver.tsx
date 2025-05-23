@@ -9,7 +9,11 @@ export default function MotionObserver({
   children,
   ...props
 }: MotionObserverProps) {
-  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    rootMargin: "0px 0px -20% 0px",
+    triggerOnce: true,
+  });
   return (
     <motion.div
       ref={ref}
