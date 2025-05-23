@@ -1,5 +1,5 @@
 import { AppShell, Box, Flex } from "@mantine/core";
-import { Outlet, useLocation, matchPath, PathPattern } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { ScrollRestoration } from "react-router";
 import classes from "./App.module.css";
 
@@ -12,12 +12,10 @@ import Navbar from "./components/navbar";
 import MotionBox from "./animations/MotionBox";
 import { fadeDown } from "./constants/motions";
 
-const REVERSED_DIRECTION_ROUTES = ["/:project"];
+// Utils
+import { isMatchedPath } from "./utils/functions";
 
-const isMatchedPath = (pattern: string, pathname: string) => {
-  const result = matchPath(pattern, pathname);
-  if (result) return result.pathname;
-};
+const REVERSED_DIRECTION_ROUTES = ["/:project"];
 
 function App() {
   const location = useLocation();

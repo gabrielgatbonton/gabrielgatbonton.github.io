@@ -1,5 +1,6 @@
-import portraitImg from "../../../assets/portrait.png";
+import { useRef } from "react";
 import { Box, Group, Image, Text, Title } from "@mantine/core";
+import { useLocation, useNavigate } from "react-router";
 import classes from "./styles.module.css";
 
 // Components
@@ -7,13 +8,37 @@ import DefaultBorder from "../../default-border";
 import IconButton from "../../buttons/icon-button";
 import PrimaryButton from "../../buttons/primary-button";
 
+// Images
+import portraitImg from "../../../assets/portrait.png";
+
 // Constants
 import { MAPPED_PROFILE_LINKS } from "../../../constants/icons";
 
 // Functions
-import { scrollToSection } from "../../../utils/functions";
+import { scrollToSection, isMatchedPath } from "../../../utils/functions";
 
 export default function ProfileCard() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleButtonClick = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    const result = isMatchedPath("/:project", location.pathname);
+
+    if (result) {
+      navigate("/");
+
+      timeoutRef.current = setTimeout(() => {
+        scrollToSection("contact");
+      }, 1000);
+    } else {
+      scrollToSection("contact");
+    }
+  };
   return (
     <DefaultBorder radius={20} responsiveClass={classes.responsiveCard}>
       <Image
@@ -62,7 +87,7 @@ export default function ProfileCard() {
         mt="auto"
         w={160}
         fw={500}
-        onClick={() => scrollToSection("contact")}
+        onClick={handleButtonClick}
       >
         Let's Talk
       </PrimaryButton>
