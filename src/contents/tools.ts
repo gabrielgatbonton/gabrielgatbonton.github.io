@@ -2,13 +2,18 @@ import MantineIcon from "../assets/logos/mantine-icon.svg";
 
 export const MAPPED_TOOLS = [
   {
-    title: "Vue.js",
+    title: "Vuejs",
     description: "Frontend Tool",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
   },
   {
-    title: "React.js",
+    title: "Reactjs",
     description: "Frontend Tool",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    title: "React Native",
+    description: "Mobile Development Tool",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
@@ -20,6 +25,11 @@ export const MAPPED_TOOLS = [
     title: "TypeScript",
     description: "Programming Language",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    title: "Python",
+    description: "Programming Language",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
   {
     title: "Mantine",
