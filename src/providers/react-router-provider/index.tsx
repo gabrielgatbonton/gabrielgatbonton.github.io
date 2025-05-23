@@ -5,22 +5,27 @@ import App from "../../App";
 import HomePage from "../../pages/home-page";
 import ProjectPage from "../../pages/project-page";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: ":project",
+          element: <ProjectPage />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
-      {
-        path: ":project",
-        element: <ProjectPage />,
-      },
-    ],
-  },
-]);
+    basename: "/personal-portfolio/",
+  }
+);
 
 export default function ReactRouterProvider() {
   return <RouterProvider router={router} />;
