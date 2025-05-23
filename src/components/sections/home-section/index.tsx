@@ -1,6 +1,9 @@
 import { HTMLAttributes } from "react";
-import { Text, Box, BoxProps, Flex } from "@mantine/core";
+import { Text, Box, BoxProps, Flex, Anchor } from "@mantine/core";
 import classes from "./styles.module.css";
+
+// Resume
+import resumePdf from "../../../assets/resume/Gabriel Gatbonton - Resume.pdf";
 
 // Hooks
 import { useResponsiveValue } from "../../../hooks/useResponsiveValue";
@@ -44,7 +47,7 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
           mb={10}
         />
         <Text size={TEXT_SIZE} fw={500} lh="115%" c="dimmed">
-          I’m a Computer Science student and frontend developer with 2 years of
+          I'm a Computer Science student and frontend developer with 2 years of
           experience in crafting responsive and engaging interfaces for web and
           mobile platforms. I love building apps that look great and feel even
           better to use.
@@ -68,9 +71,12 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
       </Flex>
 
       <Flex justify={{ base: "center", md: "start" }} gap={16}>
-        <PrimaryButton w={170} fw={600}>
-          Get my Resume
-        </PrimaryButton>
+        <Anchor href={resumePdf} target="_blank" rel="noopener noreferrer">
+          <PrimaryButton w={170} fw={600}>
+            Get my Resume
+          </PrimaryButton>
+        </Anchor>
+
         <ArrowButton onClick={() => scrollToSection("project")}>
           My Work
         </ArrowButton>
