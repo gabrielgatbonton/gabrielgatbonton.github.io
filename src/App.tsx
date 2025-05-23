@@ -1,5 +1,5 @@
 import { AppShell, Box, Flex } from "@mantine/core";
-import { Outlet } from "react-router";
+import { Outlet, useLocation, matchPath, PathPattern } from "react-router";
 import { ScrollRestoration } from "react-router";
 import classes from "./App.module.css";
 
@@ -12,7 +12,19 @@ import Navbar from "./components/navbar";
 import MotionBox from "./animations/MotionBox";
 import { fadeDown } from "./constants/motions";
 
+const REVERSED_DIRECTION_ROUTES = ["/:project"];
+
+const isMatchedPath = (pattern: string, pathname: string) => {
+  const result = matchPath(pattern, pathname);
+  if (result) return result.pathname;
+};
+
 function App() {
+  const location = useLocation();
+  const isReversedDirection = REVERSED_DIRECTION_ROUTES.some((pattern) =>
+    isMatchedPath(pattern, location.pathname)
+  );
+
   return (
     <AppShell padding="md" className={classes.appShell} pos="relative">
       <Navbar className={classes.navbarPosition} />
@@ -23,7 +35,10 @@ function App() {
           <Flex
             h="100%"
             w="100%"
-            direction={{ base: "column-reverse", md: "row" }}
+            direction={{
+              base: isReversedDirection ? "column-reverse" : "column",
+              md: "row",
+            }}
             align={{ base: "center", md: "start" }}
             wrap="nowrap"
             gap={{ base: 40, md: 80, xl: 100 }}
