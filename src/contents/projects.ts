@@ -211,7 +211,7 @@ export const MAPPED_PROJECTS = [
     keyword: "quickglance",
     subtitle: "React Native",
     description:
-      "EaseMind is a student-led platform for open emotional expression and peer support, promoting mental health in a secure digital space. Built with Mantine, React Router, Zustand, lightGallery, and Firebase for real-time chat, it also integrates ICP blockchain to protect user data and interactions.",
+      "QuickGlance is a mobile assistive platform that transforms natural movements into automated shortcuts for persons with disabilities (PWDs). Built with React Native, React Native Vision Camera, and TFLite models for real-time emotion tracking, it enables hands-free control through eye-tracking, head gestures, and emotional cues. Featuring a shortcut gallery, cloud-based user accounts, IoT integration, and AI-powered personalization, it serves as a digital hub for the PWD community in the Philippines.",
     live: null,
     creds: [
       {
