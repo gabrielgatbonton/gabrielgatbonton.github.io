@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Stack, TextInput, Textarea } from "@mantine/core";
 import { useForm, isEmail, isNotEmpty, hasLength } from "@mantine/form";
-import { notifications } from "@mantine/notifications";
+import { NOTIF_CONTROL } from "../../../constants/notifications";
 import classes from "./styles.module.css";
 
 // Components
@@ -48,20 +48,12 @@ export default function ContactForm() {
       );
 
       if (result.status === 200) {
-        notifications.show({
-          title: "Email Sent",
-          message: "Your message has been sent successfully.",
-          color: "teal",
-        });
+        NOTIF_CONTROL.success();
         form.reset();
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      notifications.show({
-        title: "Error Sending Email",
-        message: "An error occurred while sending your message.",
-        color: "red",
-      });
+      NOTIF_CONTROL.error();
     }
     setLoading(false);
   };
