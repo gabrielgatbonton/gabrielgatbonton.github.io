@@ -9,6 +9,7 @@ import { useResponsiveValue } from "../../../hooks/useResponsiveValue";
 import StatCard from "../../cards/stat-card";
 import PrimaryButton from "../../buttons/primary-button";
 import ArrowButton from "../../buttons/arrow-button";
+import Headline from "../../headline";
 
 // Constants
 import { MAPPED_STATS } from "../../../contents/stats";
@@ -36,13 +37,17 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
   return (
     <Box {...props}>
       <Box mb={48} ta={TEXT_ALIGN}>
-        <Title order={HEADLINE_ORDER} mb={10}>
-          Lorem ipsum dolor sit amet consecte.
-        </Title>
+        <Headline
+          title="Turning Code Into Beautiful Experiences"
+          highlight="Beautiful Experiences"
+          order={HEADLINE_ORDER}
+          mb={10}
+        />
         <Text size={TEXT_SIZE} fw={500} lh="115%" c="dimmed">
-          Lorem ipsum dolor sit amet consecte. Lorem ipsum dolor sit amet
-          consecte. Lorem ipsum dolor sit amet consecte. Lorem ipsum dolor sit
-          amet consecte.
+          I’m a Computer Science student and frontend developer with 2 years of
+          experience in crafting responsive and engaging interfaces for web and
+          mobile platforms. I love building apps that look great and feel even
+          better to use.
         </Text>
       </Box>
 

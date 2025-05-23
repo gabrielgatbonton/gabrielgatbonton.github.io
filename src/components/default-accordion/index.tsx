@@ -23,8 +23,8 @@ export default function DefaultAccordion({ value }: DefaultAccordionProps) {
       }}
       onChange={setActive}
     >
-      {value.map(({ question, answer }) => (
-        <Accordion.Item value={question} key={question}>
+      {value.map(({ question, answer }, index) => (
+        <Accordion.Item value={question} key={`Question-${index}: ${question}`}>
           <Accordion.Control
             className={clsx({
               [classes.accordionLabelActive]: question === active,
