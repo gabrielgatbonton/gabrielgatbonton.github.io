@@ -23,7 +23,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/personal-portfolio/",
+    basename: "/personal-portfolio",
   }
 );
 
