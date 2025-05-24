@@ -33,10 +33,6 @@ export const MAPPED_PROFILE_LINKS: readonly ProfileLink[] = [
     link: "https://github.com/gabrielgatbonton",
   },
   {
-    icon: "instagram",
-    link: "https://www.instagram.com/gatboosted",
-  },
-  {
     icon: "linkedin",
     link: "https://www.linkedin.com/in/gabrielgatbonton/",
   },
