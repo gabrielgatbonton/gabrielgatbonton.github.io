@@ -1,0 +1,1 @@
+export const HOME_DESCRIPTION = "I'm a Computer Science graduate and frontend developer with 2 years of experience crafting responsive, engaging interfaces for web and mobile platforms. I love building apps that not only look great but also feel intuitive and enjoyable to use.";

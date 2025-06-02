@@ -22,6 +22,9 @@ import {
   RESPONSIVE_TEXT_ALIGN,
 } from "../../../constants/responsive";
 
+// Contents
+import { HOME_DESCRIPTION } from "../../../contents/home";
+
 // Functions
 import { scrollToSection } from "../../../utils/functions";
 
@@ -47,10 +50,7 @@ export default function HomeSection({ ...props }: HomeSectionProps) {
           mb={10}
         />
         <Text size={TEXT_SIZE} fw={500} lh="115%" c="dimmed">
-          I'm a Computer Science student and frontend developer with 2 years of
-          experience in crafting responsive and engaging interfaces for web and
-          mobile platforms. I love building apps that look great and feel even
-          better to use.
+          {HOME_DESCRIPTION}
         </Text>
       </Box>
 

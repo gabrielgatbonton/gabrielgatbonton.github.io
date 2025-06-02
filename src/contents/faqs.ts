@@ -12,7 +12,7 @@ export const MAPPED_FAQS: FaqItem[] = [
   {
     question: "What's your experience level?",
     answer:
-      "I'm an upcoming Computer Science graduate, set to finish with Magna Cum Laude honors, and I bring 2 years of hands-on experience in frontend development. My background includes academic projects, freelance work, and personal initiatives that span both web and mobile development.",
+      "I'm a Computer Science graduate, awarded Magna Cum Laude honors, with 2 years of hands-on experience in frontend development. My background includes academic projects, freelance work, and personal initiatives that span both web and mobile development.",
   },
   {
     question: "Can you work with existing teams?",

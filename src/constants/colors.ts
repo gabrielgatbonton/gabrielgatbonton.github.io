@@ -12,3 +12,8 @@ export const primaryColor: MantineColorsTuple = [
   "#c37f00",
   "#a96d00",
 ];
+
+export const extraColors = {
+  black: "#222120",
+  white: "#F9FAFB",
+}
