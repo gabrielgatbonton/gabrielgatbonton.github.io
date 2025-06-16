@@ -1,6 +1,13 @@
 import cx from "clsx";
-import { Container, Text, createTheme, MantineProvider } from "@mantine/core";
-import { primaryColor } from "../../constants/colors";
+import {
+  Container,
+  Text,
+  createTheme,
+  MantineProvider,
+  CSSVariablesResolver,
+  Title,
+} from "@mantine/core";
+import { primaryColor, extraColors } from "../../constants/colors";
 
 // Types
 import { ReactNode } from "react";
@@ -9,16 +16,31 @@ import { ReactNode } from "react";
 import classes from "./styles.module.css";
 
 const theme = createTheme({
+  // Fonts
   fontFamily: "Outfit, sans-serif",
+
+  // Colors
   colors: {
     primaryColor,
   },
+  white: extraColors.white,
+  black: extraColors.black,
   primaryColor: "primaryColor",
+
+  // Components
   components: {
     Text: Text.extend({
+      defaultProps: {
+        c: "primaryBlack",
+      },
       classNames: (_, { c }) => ({
         root: cx({ [classes.dimmedText]: c === "dimmed" }),
       }),
+    }),
+    Title: Title.extend({
+      defaultProps: {
+        c: "primaryBlack",
+      },
     }),
     Container: Container.extend({
       classNames: (_, { size }) => ({
@@ -26,6 +48,8 @@ const theme = createTheme({
       }),
     }),
   },
+
+  // Headings
   headings: {
     sizes: {
       h1: { fontSize: "72px", fontWeight: "600", lineHeight: "115%" },
@@ -35,8 +59,27 @@ const theme = createTheme({
       h5: { fontSize: "20px", fontWeight: "600" },
     },
   },
+
+  // Other
+  other: {
+    primaryBlack: extraColors.black,
+    primaryWhite: extraColors.white,
+  },
+});
+
+const resolver: CSSVariablesResolver = (theme) => ({
+  variables: {
+    "--mantine-color-primaryBlack": theme.other.primaryBlack,
+    "--mantine-color-primaryWhite": theme.other.primaryWhite,
+  },
+  dark: {},
+  light: {},
 });
 
 export default function ThemeProvider({ children }: { children: ReactNode }) {
-  return <MantineProvider theme={theme}>{children}</MantineProvider>;
+  return (
+    <MantineProvider theme={theme} cssVariablesResolver={resolver}>
+      {children}
+    </MantineProvider>
+  );
 }

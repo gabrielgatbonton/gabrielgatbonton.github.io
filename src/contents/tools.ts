@@ -17,6 +17,11 @@ export const MAPPED_TOOLS = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
+    title: "Laravel",
+    description: "Backend Framework",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+  },
+  {
     title: "JavaScript",
     description: "Programming Language",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -30,6 +35,11 @@ export const MAPPED_TOOLS = [
     title: "Python",
     description: "Programming Language",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  },
+  {
+    title: "PHP",
+    description: "Programming Language",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
   },
   {
     title: "Mantine",
