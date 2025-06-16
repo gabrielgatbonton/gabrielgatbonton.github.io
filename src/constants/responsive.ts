@@ -46,3 +46,14 @@ export const RESPONSIVE_STACK_GAP: ResponsiveMap<number> = {
   base: 40,
   md: 100,
 };
+
+export const RESPONSIVE_INTERSECTION_OPTIONS: ResponsiveMap<IntersectionObserverInit> = {
+  base: {
+    rootMargin: "0px 0px -20% 0px",
+    threshold: 0.1,
+  },
+  sm: {
+    rootMargin: "0px 0px -80% 0px",
+    threshold: 0.1,
+  }
+}
